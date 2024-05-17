@@ -1,0 +1,7 @@
+.logo {
+  @apply text-2xl self-center mx-5 mx-2 hover:text-mipal-gray transition-colors;
+}
+
+.article {
+  @apply text-xl mx-2 border-b-2 border-transparent hover:text-mipal-gray hover:border-mipal-gray transition-colors;
+}
