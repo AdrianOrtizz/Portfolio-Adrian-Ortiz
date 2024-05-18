@@ -1,0 +1,21 @@
+.nav {
+  @apply bg-mipal-dark h-14 container flex flex-col fixed;
+
+  top: 25px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+
+  .navPrinc {
+    @apply flex justify-between;
+    .logo {
+      @apply text-2xl self-center mx-5 hover:text-mipal transition-colors;
+    }
+    .list {
+      @apply flex m-3;
+      .article {
+        @apply text-xl mx-2 border-b-2 border-transparent hover:text-mipal hover:border-mipal-gray transition-colors;
+      }
+    }
+  }
+}
