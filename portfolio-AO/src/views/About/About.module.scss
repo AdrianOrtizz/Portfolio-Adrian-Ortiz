@@ -1,0 +1,74 @@
+.card {
+  background-color: #535c9166;
+
+  @apply rounded-xl my-40 p-16 text-3xl flex flex-col;
+
+  .sectionTitle {
+    @apply flex content-center mb-10;
+
+    .titleDecoration {
+      @apply border self-center mx-4 w-48;
+    }
+  }
+
+  .principalContent {
+    @apply flex justify-between;
+
+    .descriptionContainer {
+      @apply w-3/5;
+
+      .interestTitle {
+        @apply my-5 relative top-5 border-b-2 inline;
+      }
+
+      .interestsContainer {
+        @apply my-12 flex justify-between;
+
+        .interestImgContainer {
+          &:hover {
+            .imgTitle {
+              visibility: visible;
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          @apply flex flex-col rounded-xl;
+
+          .interestImg {
+            @apply w-28 hover:scale-105 transition-transform;
+          }
+          .imgTitle {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+            @apply bg-mipal-dark rounded-full relative top-3
+              text-lg text-center;
+          }
+        }
+      }
+    }
+  }
+
+  .myImgSection {
+    @apply w-1/4 relative mr-16;
+
+    .imgContainer {
+      @apply w-80 h-96 rounded-3xl border-2 border-mipal-nodark;
+      overflow: hidden;
+
+      .myImg {
+        transition: transform 0.3s ease-in-out;
+
+        @apply w-full h-full rounded-3xl object-cover relative z-10 hover:scale-105;
+      }
+    }
+    .myImgDecoration {
+      @apply bg-mipal-dark border-2 border-mipal-nodark w-80 h-96 absolute top-6 left-6 rounded-3xl;
+    }
+  }
+
+  .downloadBtn {
+    @apply bg-mipal-dark text-white hover:bg-mipal-nodark  transition-colors mt-16 w-64 h-16 self-center rounded-full text-3xl;
+  }
+}
