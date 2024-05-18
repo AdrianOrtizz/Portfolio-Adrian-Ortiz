@@ -1,0 +1,10 @@
+.arrowContainer {
+  right: 3rem;
+  bottom: 3rem;
+
+  &:hover {
+    background-color: #9290c3aa;
+  }
+
+  @apply w-12 h-12 cursor-pointer rounded-full bg-mipal transition-colors text-5xl absolute rotate-90 transition-colors;
+}
