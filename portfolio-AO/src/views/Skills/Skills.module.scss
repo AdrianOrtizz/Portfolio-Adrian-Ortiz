@@ -1,0 +1,40 @@
+.card {
+  background-color: #535c9166;
+
+  @apply rounded-xl my-40 p-16 text-3xl flex flex-col;
+
+  .sectionTitle {
+    @apply flex content-center mb-10 justify-end;
+
+    .titleDecoration {
+      @apply border self-center mx-4 w-48;
+    }
+  }
+
+  .skillsContainer {
+    @apply grid grid-cols-6 gap-4 justify-items-center;
+
+    .skillContainer {
+      @apply flex flex-col text-center justify-around;
+
+      &:hover {
+        .skillTitle {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .skillImg {
+        @apply w-32 m-4 hover:scale-105 transition-transform;
+      }
+
+      .skillTitle {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        @apply bg-mipal-dark rounded-full p-1 text-lg;
+      }
+    }
+  }
+}
