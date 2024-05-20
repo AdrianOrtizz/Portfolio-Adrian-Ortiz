@@ -1,0 +1,13 @@
+.card {
+  background-color: #535c9166;
+
+  @apply rounded-xl my-40 p-16 text-3xl flex flex-col;
+
+  .sectionTitle {
+    @apply flex content-center mb-10;
+
+    .titleDecoration {
+      @apply border self-center mx-4 w-48;
+    }
+  }
+}
