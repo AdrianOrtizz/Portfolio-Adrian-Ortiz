@@ -10,4 +10,47 @@
       @apply border self-center mx-4 w-48;
     }
   }
+
+  .proyectsContainer {
+    @apply grid grid-cols-2 gap-4 cursor-pointer;
+
+    .proyectContainer {
+      &:hover {
+        .proyectImg {
+          @apply blur-lg;
+        }
+
+        .proyectName {
+          opacity: 1;
+        }
+      }
+
+      @apply w-full h-80 overflow-hidden rounded-xl relative;
+
+      .proyectImg {
+        transition: filter 0.5s ease-in-out;
+        @apply w-full h-full object-cover rounded-xl;
+      }
+
+      .proyectName {
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.7s ease-in-out;
+        background-color: #070f2baa;
+        @apply absolute top-1/2 left-1/2 p-4 rounded-full;
+      }
+    }
+  }
+
+  .proyectInfoContainer {
+    @apply flex flex-col;
+
+    .proyectTitle {
+      @apply text-center text-5xl m-8;
+
+      .proyectVideoContainer {
+        @apply w-full flex justify-center;
+      }
+    }
+  }
 }

@@ -12,7 +12,7 @@ const Skills = () => {
 
       <article className={styles.skillsContainer}>
         {skillsData.map((skill) => (
-          <div className={styles.skillContainer}>
+          <div className={styles.skillContainer} key={skill.name}>
             <img src={skill.URL} alt={skill.name} className={styles.skillImg} />
             <span className={styles.skillTitle}>{skill.name}</span>
           </div>
