@@ -49,7 +49,7 @@
       @apply text-center text-5xl m-8;
     }
     .proyectVideoContainer {
-      @apply flex justify-center w-videoMinW h-videoMinH sm:w-videoSMW sm:h-videoSMH md:w-videoMDW md:h-videoMDH lg:w-videoLGW lg:h-videoLGH xl:w-videoFullW xl:h-videoFullH border;
+      @apply flex justify-center w-videoMinW h-videoMinH sm:w-videoSMW sm:h-videoSMH md:w-videoMDW md:h-videoMDH lg:w-videoLGW lg:h-videoLGH xl:w-videoFullW xl:h-videoFullH;
     }
 
     .description {
