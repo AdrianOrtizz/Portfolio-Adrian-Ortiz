@@ -7,12 +7,12 @@
     @apply flex content-center mb-10 justify-end;
 
     .titleDecoration {
-      @apply border self-center mx-4 w-48;
+      @apply hidden sm:block border self-center mx-4 w-48;
     }
   }
 
   .skillsContainer {
-    @apply grid grid-cols-6 gap-4 justify-items-center;
+    @apply grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 justify-items-center;
 
     .skillContainer {
       @apply flex flex-col text-center justify-around;

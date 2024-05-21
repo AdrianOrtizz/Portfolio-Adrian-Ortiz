@@ -1,7 +1,5 @@
 .title {
-  font-size: 70px;
-
-  @apply flex justify-center text-mipal my-80;
+  @apply text-5xl sm:text-7xl flex justify-center items-center text-mipal h-96 my-60;
 
   .name {
     @apply text-white;

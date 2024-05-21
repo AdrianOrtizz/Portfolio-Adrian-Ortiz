@@ -7,12 +7,12 @@
     @apply flex content-center mb-10;
 
     .titleDecoration {
-      @apply border self-center mx-4 w-48;
+      @apply hidden sm:block border self-center mx-4 w-48;
     }
   }
 
   .proyectsContainer {
-    @apply grid grid-cols-2 gap-4;
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-4;
 
     .proyectContainer {
       &:hover {
@@ -43,13 +43,17 @@
   }
 
   .proyectInfoContainer {
-    @apply flex flex-col;
+    @apply flex flex-col items-center;
 
     .proyectTitle {
       @apply text-center text-5xl m-8;
     }
     .proyectVideoContainer {
-      @apply w-full flex justify-center;
+      @apply flex justify-center w-videoMinW h-videoMinH sm:w-videoSMW sm:h-videoSMH md:w-videoMDW md:h-videoMDH lg:w-videoLGW lg:h-videoLGH xl:w-videoFullW xl:h-videoFullH border;
+    }
+
+    .description {
+      @apply py-5 text-xl md:text-3xl md:p-16;
     }
   }
 }

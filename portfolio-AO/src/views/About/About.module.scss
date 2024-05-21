@@ -7,15 +7,15 @@
     @apply flex content-center mb-10;
 
     .titleDecoration {
-      @apply border self-center mx-4 w-48;
+      @apply hidden sm:block border self-center mx-4 w-48;
     }
   }
 
   .principalContent {
-    @apply flex justify-between;
+    @apply flex flex-col lg:flex-row justify-between;
 
     .descriptionContainer {
-      @apply w-3/5;
+      @apply w-full lg:w-1/2;
 
       .interestTitle {
         @apply my-5 relative top-5 border-b-2 inline;
@@ -35,7 +35,7 @@
           @apply flex flex-col rounded-xl;
 
           .interestImg {
-            @apply w-28 hover:scale-105 transition-transform;
+            @apply w-16 sm:w-28 hover:scale-105 transition-transform;
           }
           .imgTitle {
             opacity: 0;
@@ -51,7 +51,7 @@
   }
 
   .myImgSection {
-    @apply w-1/4 relative mr-16;
+    @apply relative m-auto lg:mr-16;
 
     .imgContainer {
       @apply w-80 h-96 rounded-3xl border-2 border-mipal-nodark;

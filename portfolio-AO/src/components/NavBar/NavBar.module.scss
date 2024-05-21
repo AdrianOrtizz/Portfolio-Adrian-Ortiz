@@ -1,5 +1,5 @@
 .nav {
-  @apply bg-mipal-dark h-14 container flex flex-col fixed;
+  @apply bg-mipal-dark container flex flex-col fixed w-full;
 
   top: 25px;
   left: 50%;
@@ -8,14 +8,15 @@
   z-index: 1000;
 
   .navPrinc {
-    @apply flex justify-between;
+    @apply flex justify-center p-3 sm:justify-between sm:p-2;
     .logo {
-      @apply text-2xl self-center mx-5 hover:text-mipal transition-colors;
+      @apply text-4xl self-center transition-colors sm:text-2xl hover:text-mipal;
     }
+
     .list {
-      @apply flex m-3;
+      @apply hidden sm:visible sm:flex items-center;
       .article {
-        @apply text-xl mx-2 border-b-2 border-transparent hover:text-mipal hover:border-mipal-gray transition-colors;
+        @apply text-xl mx-2 border-b-2 border-transparent hover:text-mipal hover:border-mipal-gray transition-colors cursor-pointer;
       }
     }
   }

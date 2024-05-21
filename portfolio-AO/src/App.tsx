@@ -13,27 +13,42 @@ import ArrowGuide from "./components/ArrowGuide/ArrowGuide";
 import styles from "./App.module.scss";
 
 function App() {
-  const { hash } = useLocation();
+  // const { hash } = useLocation();
+
+  // useEffect(() => {
+  //   if (hash) {
+  //     const element = document.querySelector(hash);
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   }
+  // }, [hash]);
+
+  const location = useLocation();
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+    if (location.hash) {
+      scrollToSection(location.hash.substring(1));
     }
-  }, [hash]);
+  }, [location]);
 
   return (
     <main className={styles.main}>
-      <NavBar />
+      <NavBar scrollToSection={scrollToSection} />
       <Home />
       <About />
       <Skills />
       <Proyects />
       <Contact />
 
-      <ArrowGuide />
+      <ArrowGuide scrollToSection={scrollToSection} />
     </main>
   );
 }

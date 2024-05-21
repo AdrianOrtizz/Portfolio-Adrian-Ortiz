@@ -11,6 +11,22 @@ export default {
           DEFAULT: "#9290C3",
         },
       },
+      spacing: {
+        videoFullW: "1280px",
+        videoFullH: "720px",
+
+        videoLGW: "1014px",
+        videoLGH: "580px",
+
+        videoMDW: "752px",
+        videoMDH: "480px",
+
+        videoSMW: "600px",
+        videoSMH: "480px",
+
+        videoMinW: "500px",
+        videoMinH: "400px",
+      },
     },
     fontFamily: {
       oswa: ["Oswald"],

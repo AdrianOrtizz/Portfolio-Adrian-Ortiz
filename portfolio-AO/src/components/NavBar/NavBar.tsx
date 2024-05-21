@@ -1,31 +1,17 @@
 import styles from "./NavBar.module.scss";
+
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+import Index from "./NavBarComponents/Index";
+
+const NavBar = ({ scrollToSection }: { scrollToSection: Function }) => {
   return (
     <nav className={styles.nav}>
       <div className={styles.navPrinc}>
-        <Link to="/#home" className={styles.logo}>
+        <Link to="/#Home" className={styles.logo}>
           {"<Adri/>"}
         </Link>
-
-        <ul className={styles.list}>
-          <li className={styles.article}>
-            <Link to="/#Home">1. Home</Link>
-          </li>
-          <li className={styles.article}>
-            <Link to="/#About">2. About me</Link>
-          </li>
-          <li className={styles.article}>
-            <Link to="/#Skills">3. Skills</Link>
-          </li>
-          <li className={styles.article}>
-            <Link to="/#Proyects">4. My Works</Link>
-          </li>
-          <li className={styles.article}>
-            <Link to="/#Contact">5. Contact me</Link>
-          </li>
-        </ul>
+        <Index scrollToSection={scrollToSection} />
       </div>
       <hr />
     </nav>
