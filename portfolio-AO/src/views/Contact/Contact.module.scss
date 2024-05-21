@@ -1,7 +1,7 @@
 .card {
   background-color: #535c9166;
 
-  @apply rounded-xl my-40 p-16 text-2xl sm:text-3xl flex flex-col;
+  @apply rounded-xl my-40 p-16 text-lg sm:text-3xl flex flex-col;
 
   .sectionTitle {
     @apply flex content-center mb-10 justify-end;

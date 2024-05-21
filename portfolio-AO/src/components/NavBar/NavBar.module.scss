@@ -10,7 +10,7 @@
   .navPrinc {
     @apply flex justify-center p-3 sm:justify-between sm:p-2;
     .logo {
-      @apply text-4xl self-center transition-colors sm:text-2xl hover:text-mipal;
+      @apply text-4xl self-center transition-colors sm:text-2xl hover:text-mipal cursor-pointer;
     }
 
     .list {

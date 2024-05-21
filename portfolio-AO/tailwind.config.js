@@ -24,8 +24,8 @@ export default {
         videoSMW: "600px",
         videoSMH: "480px",
 
-        videoMinW: "500px",
-        videoMinH: "400px",
+        videoMinW: "380px",
+        videoMinH: "250px",
       },
     },
     fontFamily: {
