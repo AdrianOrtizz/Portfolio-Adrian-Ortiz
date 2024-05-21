@@ -5,25 +5,25 @@ const NavBar = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.navPrinc}>
-        <Link to="/" className={styles.logo}>
+        <Link to="/#home" className={styles.logo}>
           {"<Adri/>"}
         </Link>
 
         <ul className={styles.list}>
           <li className={styles.article}>
-            <Link to="/#home">1. Home</Link>
+            <Link to="/#Home">1. Home</Link>
           </li>
           <li className={styles.article}>
-            <Link to="/#about">2. About me</Link>
+            <Link to="/#About">2. About me</Link>
           </li>
           <li className={styles.article}>
-            <Link to="#">3. Skills</Link>
+            <Link to="/#Skills">3. Skills</Link>
           </li>
           <li className={styles.article}>
-            <Link to="#">4. My Works</Link>
+            <Link to="/#Proyects">4. My Works</Link>
           </li>
           <li className={styles.article}>
-            <Link to="#">5. Contact me</Link>
+            <Link to="/#Contact">5. Contact me</Link>
           </li>
         </ul>
       </div>

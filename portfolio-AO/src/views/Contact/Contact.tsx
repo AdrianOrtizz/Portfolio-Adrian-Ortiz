@@ -2,7 +2,7 @@ import styles from "./Contact.module.scss";
 
 const Contact = () => {
   return (
-    <section className={styles.card}>
+    <section id="Contact" className={styles.card}>
       <div className={styles.sectionTitle}>
         <div className={styles.titleDecoration}></div>
         <h2>5. Contact Me</h2>
@@ -17,7 +17,7 @@ const Contact = () => {
             target="_BLANK"
           >
             <img
-              className="w-20"
+              className="w-20 hover:scale-105 transition-transform"
               src="https://res.cloudinary.com/djd7b0upe/image/upload/v1716055624/Portfolio/Redes/linkedin_bboykt.png"
               alt="LinkedIn"
             />
@@ -28,7 +28,7 @@ const Contact = () => {
             target="_BLANK"
           >
             <img
-              className="w-20"
+              className="w-20 hover:scale-105 transition-transform"
               src="https://res.cloudinary.com/djd7b0upe/image/upload/v1716055623/Portfolio/Redes/github_qdkaxg.png"
               alt="Git Hub"
             />

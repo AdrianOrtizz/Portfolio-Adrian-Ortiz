@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ArrowGuide = () => {
   return (
     <div className={styles.arrowContainer}>
-      <Link to="/#about">
+      <Link to="/#About">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"

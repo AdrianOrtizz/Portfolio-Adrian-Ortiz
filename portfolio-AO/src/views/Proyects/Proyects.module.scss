@@ -12,7 +12,7 @@
   }
 
   .proyectsContainer {
-    @apply grid grid-cols-2 gap-4 cursor-pointer;
+    @apply grid grid-cols-2 gap-4;
 
     .proyectContainer {
       &:hover {
@@ -25,7 +25,7 @@
         }
       }
 
-      @apply w-full h-80 overflow-hidden rounded-xl relative;
+      @apply w-full h-80 overflow-hidden rounded-xl relative cursor-pointer;
 
       .proyectImg {
         transition: filter 0.5s ease-in-out;
@@ -47,10 +47,9 @@
 
     .proyectTitle {
       @apply text-center text-5xl m-8;
-
-      .proyectVideoContainer {
-        @apply w-full flex justify-center;
-      }
+    }
+    .proyectVideoContainer {
+      @apply w-full flex justify-center;
     }
   }
 }

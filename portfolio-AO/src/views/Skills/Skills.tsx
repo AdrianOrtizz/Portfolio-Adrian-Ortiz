@@ -4,7 +4,7 @@ import { skillsData } from "./SkillsData";
 
 const Skills = () => {
   return (
-    <section className={styles.card}>
+    <section id="Skills" className={styles.card}>
       <div className={styles.sectionTitle}>
         <div className={styles.titleDecoration}></div>
         <h2>3. Skills</h2>
