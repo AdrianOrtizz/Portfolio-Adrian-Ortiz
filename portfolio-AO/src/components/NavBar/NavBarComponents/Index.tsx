@@ -4,7 +4,7 @@ const articles: string[] = [
   "Home",
   "About me",
   "Skills",
-  "Proyects",
+  "Projects",
   "Contact me",
 ];
 

@@ -16,7 +16,7 @@ const Proyects = () => {
   });
 
   return (
-    <section id="Proyects" className={styles.card}>
+    <section id="Projects" className={styles.card}>
       {proyect.name ? (
         <ProyectInfo proyect={proyect} SetProyect={SetProyect} />
       ) : (
