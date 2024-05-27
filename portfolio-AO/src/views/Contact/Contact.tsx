@@ -2,13 +2,13 @@ import styles from "./Contact.module.scss";
 
 const Contact = () => {
   return (
-    <section id="Contact" className={styles.card}>
+    <section id="Contactame" className={styles.card}>
       <div className={styles.sectionTitle}>
         <div className={styles.titleDecoration}></div>
-        <h2>5. Contact Me</h2>
+        <h2>5. Contactame</h2>
       </div>
       <div className="self-center">
-        <h2 className="m-4">Number Phone: +54 11 3611-7529</h2>
+        <h2 className="m-4">Número de telefono: +54 11 3611-7529</h2>
         <h2 className="m-4">Email: Adrianortizzt1vl@gmail.com</h2>
         <div className="flex justify-center">
           <a

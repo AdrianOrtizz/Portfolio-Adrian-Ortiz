@@ -5,19 +5,19 @@ interface interest {
 
 export const interestImg: interest[] = [
   {
-    title: "Cinema",
+    title: "Cine",
     URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055621/Portfolio/Intereses/cine_einhxz.png",
   },
   {
-    title: "Gaming",
+    title: "Video Juegos",
     URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055621/Portfolio/Intereses/gaming_wxruam.png",
   },
   {
-    title: "Sports",
+    title: "Deportes",
     URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055620/Portfolio/Intereses/deportes_vhxqhz.png",
   },
   {
-    title: "Music",
+    title: "Música",
     URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055616/Portfolio/Intereses/musica_thbmy7.png",
   },
 ];

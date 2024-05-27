@@ -5,7 +5,7 @@ const AllProyects = ({ SetProyect }: { SetProyect: Function }) => {
   return (
     <article>
       <div className={styles.sectionTitle}>
-        <h2>4. Projects</h2>
+        <h2>4. Proyectos</h2>
         <div className={styles.titleDecoration}></div>
       </div>
       <article className={styles.proyectsContainer}>

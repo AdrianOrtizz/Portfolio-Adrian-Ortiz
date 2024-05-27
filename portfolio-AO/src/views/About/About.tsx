@@ -6,9 +6,9 @@ import DownloadButton from "./AboutComponents/DownloadButton";
 
 const About = () => {
   return (
-    <div id="About" className={styles.card}>
+    <div id="Sobre" className={styles.card}>
       <div className={styles.sectionTitle}>
-        <h2>2. About me</h2>
+        <h2>2. Sobre mí</h2>
         <div className={styles.titleDecoration}></div>
       </div>
 

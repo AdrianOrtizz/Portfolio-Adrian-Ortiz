@@ -6,13 +6,13 @@ const MyDescription = () => {
   return (
     <div className={styles.descriptionContainer}>
       <p>
-        Hello! Let me introduce myself: I am Adrián Ortiz, I am a full stack web
-        developer from Buenos Aires, Argentina. I am an organized, proactive
-        person and always willing to work as a team and give 100% of my ability
-        to create the most optimal solution to any problem that arises.
+        Hola! Me presento: soy Adrian Ortiz, soy un desarrollador web full stack
+        y soy de Buenos Aires, Argentina. Soy una persona organizada, proactiva
+        y siempre dispuesto a trabajar en equipo y dar el 100% de mi capacidad
+        para crear la solución más óptima a cualquier problema que se presente.
       </p>
 
-      <h2 className={styles.interestTitle}>My Interests</h2>
+      <h2 className={styles.interestTitle}>Mis intereses</h2>
 
       <div className={styles.interestsContainer}>
         {interestImg.map((image) => (

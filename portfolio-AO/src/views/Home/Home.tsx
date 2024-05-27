@@ -2,10 +2,10 @@ import styles from "./Home.module.scss";
 
 const Home = () => {
   return (
-    <div id="Home" className={styles.title}>
+    <div id="Inicio" className={styles.title}>
       <h1>
-        Hi, I'm <span className={styles.name}>Adrian Ortiz</span> <br /> Full
-        stack developer
+        Hola! Soy <span className={styles.name}>Adrian Ortiz</span> <br />
+        Desarrollador full stack
       </h1>
     </div>
   );

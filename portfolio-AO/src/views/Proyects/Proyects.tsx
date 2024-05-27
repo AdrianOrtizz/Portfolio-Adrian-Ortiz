@@ -13,10 +13,11 @@ const Proyects = () => {
     videoURL: "",
     gitHubURL: "",
     description: "",
+    technologies: [],
   });
 
   return (
-    <section id="Projects" className={styles.card}>
+    <section id="Proyectos" className={styles.card}>
       {proyect.name ? (
         <ProyectInfo proyect={proyect} SetProyect={SetProyect} />
       ) : (

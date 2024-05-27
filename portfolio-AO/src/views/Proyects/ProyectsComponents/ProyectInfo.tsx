@@ -22,6 +22,7 @@ const ProyectInfo = ({
             videoURL: "",
             gitHubURL: "",
             description: "",
+            technologies: [],
           })
         }
       >
@@ -43,12 +44,27 @@ const ProyectInfo = ({
               className="w-full h-full rounded-xl"
             ></iframe>
           </div>
-          <p className={styles.description}>
-            {proyect.description} <br />{" "}
-            <a className="border-b-2" href={proyect.gitHubURL} target="_BLANK">
-              Git Hub Repository
-            </a>
-          </p>
+          <div className={styles.description}>
+            <p>
+              {proyect.description} <br />
+              <a
+                className="border-b-2"
+                href={proyect.gitHubURL}
+                target="_BLANK"
+              >
+                Repositorio de Git Hub
+              </a>
+            </p>
+
+            <h2 className="pt-12">
+              Tecnologías y librerías utilizadas para este proyecto:
+            </h2>
+            <ul>
+              {proyect.technologies.map((tech) => (
+                <li>{tech}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </article>
     </article>

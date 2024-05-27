@@ -1,11 +1,11 @@
 import styles from "../NavBar.module.scss";
 
 const articles: string[] = [
-  "Home",
-  "About me",
-  "Skills",
-  "Projects",
-  "Contact me",
+  "Inicio",
+  "Sobre mí",
+  "Habilidades",
+  "Proyectos",
+  "Contactame",
 ];
 
 const Index = ({ scrollToSection }: { scrollToSection: Function }) => {

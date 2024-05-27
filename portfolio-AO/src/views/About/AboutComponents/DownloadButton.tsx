@@ -12,7 +12,7 @@ const DownloadButton = () => {
 
   return (
     <button onClick={handleDownload} className={styles.downloadBtn}>
-      DOWNLOAD MY CV
+      DESCARGAR MI CV
     </button>
   );
 };

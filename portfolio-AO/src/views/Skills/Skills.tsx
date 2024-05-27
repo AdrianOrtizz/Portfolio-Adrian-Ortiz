@@ -4,10 +4,10 @@ import { skillsData } from "./SkillsData";
 
 const Skills = () => {
   return (
-    <section id="Skills" className={styles.card}>
+    <section id="Habilidades" className={styles.card}>
       <div className={styles.sectionTitle}>
         <div className={styles.titleDecoration}></div>
-        <h2>3. Skills</h2>
+        <h2>3. Habilidades</h2>
       </div>
 
       <article className={styles.skillsContainer}>

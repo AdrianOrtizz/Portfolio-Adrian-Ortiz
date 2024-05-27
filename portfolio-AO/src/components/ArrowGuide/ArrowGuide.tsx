@@ -3,7 +3,7 @@ import styles from "./ArrowGuide.module.scss";
 const ArrowGuide = ({ scrollToSection }: { scrollToSection: Function }) => {
   return (
     <div
-      onClick={() => scrollToSection("About")}
+      onClick={() => scrollToSection("Sobre")}
       className={styles.arrowContainer}
     >
       <svg
