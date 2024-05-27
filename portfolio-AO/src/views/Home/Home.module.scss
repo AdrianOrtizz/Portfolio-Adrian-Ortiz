@@ -1,5 +1,5 @@
 .title {
-  @apply text-5xl sm:text-7xl flex justify-center items-center text-mipal h-96 my-60;
+  @apply text-5xl sm:text-7xl flex justify-center items-center text-mipal h-screen w-full;
 
   .name {
     @apply text-white;
