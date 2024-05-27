@@ -4,7 +4,7 @@ import MyDescription from "./AboutComponents/MyDescription";
 import ImageSection from "./AboutComponents/ImageSection";
 import DownloadButton from "./AboutComponents/DownloadButton";
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <div id="Sobre" className={styles.card}>
       <div className={styles.sectionTitle}>

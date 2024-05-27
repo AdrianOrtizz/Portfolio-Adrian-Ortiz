@@ -1,6 +1,6 @@
 import styles from "./Home.module.scss";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <div id="Inicio" className={styles.title}>
       <h1>

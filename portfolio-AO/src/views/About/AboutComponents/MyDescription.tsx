@@ -2,7 +2,7 @@ import styles from "../About.module.scss";
 
 import { interestImg } from "../AboutData";
 
-const MyDescription = () => {
+const MyDescription: React.FC = () => {
   return (
     <div className={styles.descriptionContainer}>
       <p>

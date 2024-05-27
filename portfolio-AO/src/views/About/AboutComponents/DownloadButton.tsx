@@ -1,6 +1,6 @@
 import styles from "../About.module.scss";
 
-const DownloadButton = () => {
+const DownloadButton: React.FC = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/Adrian_Ortiz_CV.pdf";

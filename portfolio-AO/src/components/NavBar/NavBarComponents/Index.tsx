@@ -1,5 +1,9 @@
 import styles from "../NavBar.module.scss";
 
+interface NavBarIndexProps {
+  scrollToSection: Function;
+}
+
 const articles: string[] = [
   "Inicio",
   "Sobre mí",
@@ -8,11 +12,11 @@ const articles: string[] = [
   "Contactame",
 ];
 
-const Index = ({ scrollToSection }: { scrollToSection: Function }) => {
+const Index: React.FC<NavBarIndexProps> = ({ scrollToSection }) => {
   return (
     <ul className={styles.list}>
       {articles.map((art, index) => (
-        <li className={styles.article}>
+        <li className={styles.article} key={index}>
           <span onClick={() => scrollToSection(art.split(" ")[0])}>{`${
             index + 1
           }. ${art}`}</span>

@@ -2,7 +2,7 @@ import styles from "./Skills.module.scss";
 
 import { skillsData } from "./SkillsData";
 
-const Skills = () => {
+const Skills: React.FC = () => {
   return (
     <section id="Habilidades" className={styles.card}>
       <div className={styles.sectionTitle}>

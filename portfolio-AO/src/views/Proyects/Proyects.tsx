@@ -6,7 +6,7 @@ import { proyectData } from "./ProyectsData";
 import AllProyects from "./ProyectsComponents/AllProyects";
 import ProyectInfo from "./ProyectsComponents/ProyectInfo";
 
-const Proyects = () => {
+const Proyects: React.FC = () => {
   const [proyect, SetProyect] = useState<proyectData>({
     name: "",
     imgURL: "",

@@ -1,6 +1,10 @@
 import styles from "./ArrowGuide.module.scss";
 
-const ArrowGuide = ({ scrollToSection }: { scrollToSection: Function }) => {
+interface ArrowGuideProps {
+  scrollToSection: Function;
+}
+
+const ArrowGuide: React.FC<ArrowGuideProps> = ({ scrollToSection }) => {
   return (
     <div
       onClick={() => scrollToSection("Sobre")}

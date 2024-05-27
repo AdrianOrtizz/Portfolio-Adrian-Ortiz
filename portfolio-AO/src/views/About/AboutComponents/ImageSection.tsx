@@ -2,7 +2,7 @@ import styles from "../About.module.scss";
 
 import { myImgURL } from "../AboutData";
 
-const ImageSection = () => {
+const ImageSection: React.FC = () => {
   return (
     <div className={styles.myImgSection}>
       <div className={styles.imgContainer}>

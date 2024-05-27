@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import Home from "./views/Home/Home";
@@ -12,18 +12,7 @@ import ArrowGuide from "./components/ArrowGuide/ArrowGuide";
 
 import styles from "./App.module.scss";
 
-function App() {
-  // const { hash } = useLocation();
-
-  // useEffect(() => {
-  //   if (hash) {
-  //     const element = document.querySelector(hash);
-  //     if (element) {
-  //       element.scrollIntoView({ behavior: "smooth" });
-  //     }
-  //   }
-  // }, [hash]);
-
+const App: React.FC = () => {
   const location = useLocation();
 
   const scrollToSection = (id: string) => {
@@ -51,6 +40,6 @@ function App() {
       <ArrowGuide scrollToSection={scrollToSection} />
     </main>
   );
-}
+};
 
 export default App;

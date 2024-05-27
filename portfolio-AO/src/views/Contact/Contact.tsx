@@ -1,6 +1,6 @@
 import styles from "./Contact.module.scss";
 
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <section id="Contactame" className={styles.card}>
       <div className={styles.sectionTitle}>

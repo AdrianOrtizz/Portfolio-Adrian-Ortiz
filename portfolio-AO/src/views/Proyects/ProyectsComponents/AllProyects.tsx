@@ -1,7 +1,11 @@
 import styles from "../Proyects.module.scss";
 import { proyects } from "../ProyectsData";
 
-const AllProyects = ({ SetProyect }: { SetProyect: Function }) => {
+interface AllProyectsProps {
+  SetProyect: Function;
+}
+
+const AllProyects: React.FC<AllProyectsProps> = ({ SetProyect }) => {
   return (
     <article>
       <div className={styles.sectionTitle}>

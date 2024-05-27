@@ -4,13 +4,12 @@ import styles from "../Proyects.module.scss";
 
 import { proyectData } from "../ProyectsData";
 
-const ProyectInfo = ({
-  proyect,
-  SetProyect,
-}: {
+interface ProyectInfoProps {
   proyect: proyectData;
   SetProyect: Function;
-}) => {
+}
+
+const ProyectInfo: React.FC<ProyectInfoProps> = ({ proyect, SetProyect }) => {
   return (
     <article>
       <div
@@ -61,7 +60,7 @@ const ProyectInfo = ({
             </h2>
             <ul>
               {proyect.technologies.map((tech) => (
-                <li>{tech}</li>
+                <li key={tech}>{tech}</li>
               ))}
             </ul>
           </div>

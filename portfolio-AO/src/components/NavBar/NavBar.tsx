@@ -2,7 +2,11 @@ import styles from "./NavBar.module.scss";
 
 import Index from "./NavBarComponents/Index";
 
-const NavBar = ({ scrollToSection }: { scrollToSection: Function }) => {
+interface NavBarProps {
+  scrollToSection: Function;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ scrollToSection }) => {
   return (
     <nav className={styles.nav}>
       <div className={styles.navPrinc}>
