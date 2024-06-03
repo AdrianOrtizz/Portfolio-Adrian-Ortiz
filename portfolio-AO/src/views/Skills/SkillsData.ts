@@ -25,12 +25,12 @@ export const skillsData: skill[] = [
     URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055613/Portfolio/Tecnologias/react_be94ej.png",
   },
   {
-    name: "Redux",
-    URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055614/Portfolio/Tecnologias/redux_mpacqz.png",
-  },
-  {
     name: "Node.js",
     URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055608/Portfolio/Tecnologias/node_lknncm.png",
+  },
+  {
+    name: "Redux",
+    URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055614/Portfolio/Tecnologias/redux_mpacqz.png",
   },
   {
     name: "Express",
