@@ -1,0 +1,10 @@
+.contactButtonContainer {
+  right: 3rem;
+  bottom: 7rem;
+
+  &:hover {
+    background-color: #9290c3aa;
+  }
+
+  @apply sm:hidden w-12 h-12 cursor-pointer rounded-full bg-mipal text-5xl absolute rotate-90 transition-colors;
+}

@@ -2,17 +2,15 @@ import styles from "../NavBar.module.scss";
 
 interface NavBarIndexProps {
   scrollToSection: Function;
+  setShowContact: Function;
 }
 
-const articles: string[] = [
-  "Inicio",
-  "Sobre mí",
-  "Habilidades",
-  "Proyectos",
-  "Contactame",
-];
+const articles: string[] = ["Inicio", "Sobre mí", "Habilidades", "Proyectos"];
 
-const Index: React.FC<NavBarIndexProps> = ({ scrollToSection }) => {
+const Index: React.FC<NavBarIndexProps> = ({
+  scrollToSection,
+  setShowContact,
+}) => {
   return (
     <ul className={styles.list}>
       {articles.map((art, index) => (
@@ -22,6 +20,10 @@ const Index: React.FC<NavBarIndexProps> = ({ scrollToSection }) => {
           }. ${art}`}</span>
         </li>
       ))}
+
+      <li className={styles.article}>
+        <button onClick={() => setShowContact(true)}>5. Contactame</button>
+      </li>
     </ul>
   );
 };

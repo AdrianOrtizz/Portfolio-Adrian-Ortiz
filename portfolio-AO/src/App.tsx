@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import Home from "./views/Home/Home";
@@ -9,11 +9,19 @@ import Contact from "./views/Contact/Contact";
 
 import NavBar from "./components/NavBar/NavBar";
 import ArrowGuide from "./components/ArrowGuide/ArrowGuide";
+import ContactButton from "./components/ContactButton/ContactButton";
 
 import styles from "./App.module.scss";
 
+import handleShowContact from "./helpers/showContact";
+
 const App: React.FC = () => {
   const location = useLocation();
+  const [showContact, setShowContact] = useState<boolean>(false);
+
+  useEffect(() => {
+    handleShowContact(showContact);
+  }, [showContact]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -30,13 +38,19 @@ const App: React.FC = () => {
 
   return (
     <main className={styles.main}>
-      <NavBar scrollToSection={scrollToSection} />
+      <NavBar
+        scrollToSection={scrollToSection}
+        setShowContact={setShowContact}
+      />
+
+      {showContact && <Contact setShowContact={setShowContact} />}
+
       <Home />
       <About />
       <Skills />
       <Proyects />
-      <Contact />
 
+      <ContactButton setShowContact={setShowContact} />
       <ArrowGuide scrollToSection={scrollToSection} />
     </main>
   );
