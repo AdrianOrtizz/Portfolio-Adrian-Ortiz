@@ -29,6 +29,10 @@ export const skillsData: skill[] = [
     URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055608/Portfolio/Tecnologias/node_lknncm.png",
   },
   {
+    name: "NextJS",
+    URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1719794643/Portfolio/Tecnologias/nextjs_btuwu6.png",
+  },
+  {
     name: "Redux",
     URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055614/Portfolio/Tecnologias/redux_mpacqz.png",
   },

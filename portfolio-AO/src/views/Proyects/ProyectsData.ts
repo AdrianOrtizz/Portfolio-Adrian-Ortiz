@@ -66,4 +66,14 @@ export const proyects: proyectData[] = [
       "Sass",
     ],
   },
+  {
+    name: "Instagram stalker App",
+    imgURL:
+      "https://res.cloudinary.com/djd7b0upe/image/upload/v1719794662/Portfolio/Proyectos/Instagram_stalker_app.png",
+    videoURL: "https://www.youtube.com/embed/1YiMWxrVo2o?si=B9EhOTtgklQo2Zyg",
+    gitHubURL: "https://github.com/AdrianOrtizz/instagram_stalker_app",
+    description:
+      "El uso de la página es simple, el usuario puede buscar una cuenta de Instagram, que tiene que ser pública, y obtiene tres listas: seguidos, seguidores y cuentas que no lo siguen. En cada lista puede buscar una cuenta por su nombre o nombre de usuario y al seleccionarlo, es redirigido a la página de Instagram de esa cuenta. Para hacer esta página usé la Instagram Scraper API (https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2) la cual accede a datos públicos de Instagram, por lo que no es capaz de acceder a la información de cuentas privadas. La aplicación no está deployada porque los usos de la api son limitados, por lo que eventualmente la aplicación dejaría de funcionar si mucha gente la prueba.",
+    technologies: ["React", "NextJS", "Sass", "Tailwind CSS"],
+  },
 ];
