@@ -54,6 +54,29 @@
 
     .description {
       @apply py-12 md:text-3xl;
+
+      .techContainer {
+        @apply flex flex-col text-center justify-around;
+
+        &:hover {
+          .techTitle {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .techImg {
+          @apply w-32 m-4 hover:scale-105 transition-transform;
+        }
+
+        .techTitle {
+          opacity: 0;
+          transform: translateY(-10px);
+          transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+          @apply bg-mipal-dark rounded-full p-1 text-lg;
+        }
+      }
     }
   }
 }

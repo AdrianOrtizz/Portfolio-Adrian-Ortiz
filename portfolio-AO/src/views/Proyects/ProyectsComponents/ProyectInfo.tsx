@@ -44,25 +44,36 @@ const ProyectInfo: React.FC<ProyectInfoProps> = ({ proyect, SetProyect }) => {
             ></iframe>
           </div>
           <div className={styles.description}>
-            <p>
-              {proyect.description} <br />
-              <a
-                className="border-b-2"
-                href={proyect.gitHubURL}
-                target="_BLANK"
-              >
-                Repositorio de Git Hub
-              </a>
-            </p>
+            <p>{proyect.description}</p>
 
-            <h2 className="pt-12">
+            <h2 className="pt-12 text-center mb-6">
               Tecnologías y librerías utilizadas para este proyecto:
             </h2>
-            <ul>
+            <ul className="flex flex-wrap justify-center">
               {proyect.technologies.map((tech) => (
-                <li key={tech}>{tech}</li>
+                <li className={styles.techContainer} key={tech.name}>
+                  <img
+                    src={tech.url}
+                    alt={tech.name}
+                    className={styles.techImg}
+                  />
+                  <span className={styles.techTitle}>{tech.name}</span>
+                </li>
               ))}
             </ul>
+
+            <article className=" flex flex-col items-center">
+              <h2 className="mb-6">Repositorio de Git Hub</h2>
+              <div className="w-32">
+                <a className="" href={proyect.gitHubURL} target="_BLANK">
+                  <img
+                    src="https://res.cloudinary.com/djd7b0upe/image/upload/v1716055623/Portfolio/Redes/github_qdkaxg.png"
+                    alt="Repositorio de Git Hub"
+                    className="h-32"
+                  />
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </article>
