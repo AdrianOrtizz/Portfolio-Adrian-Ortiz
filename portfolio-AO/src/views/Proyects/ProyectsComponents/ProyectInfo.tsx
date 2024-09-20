@@ -6,7 +6,7 @@ import { proyectData } from "../ProyectsData";
 
 interface ProyectInfoProps {
   proyect: proyectData;
-  SetProyect: Function;
+  SetProyect: (proyect: proyectData) => void;
 }
 
 const ProyectInfo: React.FC<ProyectInfoProps> = ({ proyect, SetProyect }) => {
