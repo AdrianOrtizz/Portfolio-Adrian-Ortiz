@@ -17,6 +17,49 @@
     .descriptionContainer {
       @apply w-full lg:w-1/2;
 
+      .moreText {
+        display: inline-block;
+        font-size: 2rem;
+        clip-path: inset(
+          0 0 100% 0
+        ); 
+        animation: revealText 0.5s forwards ease-in-out;
+      }
+
+      @keyframes revealText {
+        0% {
+          clip-path: inset(0 0 100% 0); 
+        }
+        100% {
+          clip-path: inset(0 0 0 0); 
+        }
+      }
+
+      .seeMore {
+        animation: rotateArrowToSeeLess 0.5s forwards ease-in-out;
+
+        @apply flex justify-center m-2;
+      }
+
+      .seeLess {
+        animation: rotateArrowToSeeMore 0.5s forwards ease-in-out;
+      }
+
+      @keyframes identifier {
+      }
+
+      @keyframes rotateArrowToSeeLess {
+        100% {
+          rotate: -90deg;
+        }
+      }
+
+      @keyframes rotateArrowToSeeMore {
+        100% {
+          rotate: 90deg;
+        }
+      }
+
       .interestTitle {
         @apply my-5 relative top-5 border-b-2 inline;
       }

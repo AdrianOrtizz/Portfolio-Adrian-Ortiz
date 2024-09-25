@@ -5,12 +5,18 @@ import { interestImg } from "../AboutData";
 const MyDescription: React.FC = () => {
   return (
     <div className={styles.descriptionContainer}>
-      <p>
-        Hola! Me presento: soy Adrian Ortiz, soy un desarrollador web full stack
-        y soy de Buenos Aires, Argentina. Soy una persona organizada, proactiva
-        y siempre dispuesto a trabajar en equipo y dar el 100% de mi capacidad
-        para crear la solución más óptima a cualquier problema que se presente.
-      </p>
+      <article>
+        <p>
+          Hola! Me presento: soy desarrollador web full stack, soy de Buenos
+          Aires, Argentina y tengo 21 años. Tengo experiencia en diferentes
+          proyectos implementando tecnologías como JavaScript, React, Node.js y
+          postgreSQL. <br /> Gracias a mi background en administración y
+          logística, he destacado en mis equipos por mi organización y
+          proactividad. Siempre estoy dispuesto a trabajar en equipo logrando
+          generar un buen clima laboral mediante la empatía, el compañerismo y
+          el respeto.
+        </p>
+      </article>
 
       <h2 className={styles.interestTitle}>Mis intereses</h2>
 
