@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+# Adrian Ortiz Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hola, soy Adrian Ortiz, soy desarrollador web full stack, tengo 21 años y soy de Buenos Aires. Este es mi portfolio donde se pueden ver mis proyectos hasta la fecha y en donde pueden encontrar mis datos de contacto.
 
-Currently, two official plugins are available:
+## Indice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Estas son las cinco secciones de mi portfolio
 
-## Expanding the ESLint configuration
+- Inicio
+- Sobre mí
+- Habilidades
+- Proyectos
+- Contacto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologías utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+Este portfolio está hecho con React y para los estilos usé Tailwind. Está desarrollado con Vite y desplegado en Vercel.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Para cerrar
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Muchas gracias por tomarte el tiempo de ver mi portfolio!
