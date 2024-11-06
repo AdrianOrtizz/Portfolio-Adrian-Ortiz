@@ -3,7 +3,7 @@ import styles from "./Contact.module.scss";
 import ArrowBack from "../../components/ArrowBack/ArrowBack";
 
 interface ContactProps {
-  setShowContact: Function;
+  setShowContact: (show: boolean) => void;
 }
 
 const Contact: React.FC<ContactProps> = ({ setShowContact }) => {

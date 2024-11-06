@@ -14,6 +14,8 @@
   background-color: #242f54;
   z-index: 5000;
 
+  animation: appear linear 0.1s;
+
   @apply container relative m-auto rounded-xl my-40 p-16 text-lg sm:text-3xl flex flex-col;
 
   .sectionTitle {
@@ -22,5 +24,16 @@
     .titleDecoration {
       @apply hidden sm:block border self-center mx-4 w-48;
     }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }

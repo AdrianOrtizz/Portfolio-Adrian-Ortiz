@@ -1,7 +1,22 @@
 .title {
   @apply text-4xl sm:text-7xl flex justify-center items-center text-mipal h-screen w-full;
 
+  .titleText {
+    animation: introAnimation 0.6s ease-out;
+  }
+
   .name {
     @apply text-white;
+  }
+}
+
+@keyframes introAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }

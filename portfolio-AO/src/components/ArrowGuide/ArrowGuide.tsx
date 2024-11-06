@@ -1,7 +1,7 @@
 import styles from "./ArrowGuide.module.scss";
 
 interface ArrowGuideProps {
-  scrollToSection: Function;
+  scrollToSection: (section: string) => void;
 }
 
 const ArrowGuide: React.FC<ArrowGuideProps> = ({ scrollToSection }) => {
@@ -15,6 +15,7 @@ const ArrowGuide: React.FC<ArrowGuideProps> = ({ scrollToSection }) => {
         width="1em"
         height="1em"
         viewBox="0 0 24 24"
+        className={styles.arrow}
       >
         <path
           fill="#1B1A55"

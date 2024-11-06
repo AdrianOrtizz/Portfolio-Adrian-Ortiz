@@ -3,8 +3,8 @@ import styles from "./NavBar.module.scss";
 import Index from "./NavBarComponents/Index";
 
 interface NavBarProps {
-  scrollToSection: Function;
-  setShowContact: Function;
+  scrollToSection: (section: string) => void;
+  setShowContact: (show: boolean) => void;
 }
 
 const NavBar: React.FC<NavBarProps> = ({ scrollToSection, setShowContact }) => {

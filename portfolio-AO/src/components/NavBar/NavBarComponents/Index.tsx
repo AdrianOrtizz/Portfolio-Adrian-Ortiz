@@ -1,8 +1,8 @@
 import styles from "../NavBar.module.scss";
 
 interface NavBarIndexProps {
-  scrollToSection: Function;
-  setShowContact: Function;
+  scrollToSection: (section: string) => void;
+  setShowContact: (show: boolean) => void;
 }
 
 const articles: string[] = ["Inicio", "Sobre mí", "Habilidades", "Proyectos"];

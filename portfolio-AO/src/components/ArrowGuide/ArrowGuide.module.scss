@@ -5,6 +5,22 @@
   &:hover {
     background-color: #9290c3aa;
   }
+  animation: introAnimation 0.6s ease-in-out;
 
-  @apply w-12 h-12 cursor-pointer rounded-full bg-mipal text-5xl absolute rotate-90 transition-colors;
+  @apply w-12 h-12 cursor-pointer rounded-full bg-mipal text-5xl absolute transition-colors;
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes introAnimation {
+  0% {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
