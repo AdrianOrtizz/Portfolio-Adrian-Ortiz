@@ -173,4 +173,31 @@ export const proyects: proyectData[] = [
       },
     ],
   },
+  {
+    name: "Tizz Tube Downloader",
+    imgURL:
+      "https://res.cloudinary.com/djd7b0upe/image/upload/v1736026602/Portfolio/Proyectos/TizzTube.png",
+    videoURL: "https://www.youtube.com/embed/wh5SKy4wWaU",
+    gitHubURL: "https://github.com/AdrianOrtizz/TizzTube-downloader",
+    description:
+      "Tizz Tube es una página para descargar videos y audios de youtube. El usuario puede ingresar la URL de un video y la api trae la información del video y se generan los reproductores con los que el usuario puede ver el video o escuchar el audio y los puede descargar. Además el video queda guardado en el historial que está almacenado en el local storage del navegador",
+    technologies: [
+      {
+        name: "React",
+        url: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055613/Portfolio/Tecnologias/react_be94ej.png",
+      },
+      {
+        name: "NextJS",
+        url: "https://res.cloudinary.com/djd7b0upe/image/upload/v1719794643/Portfolio/Tecnologias/nextjs_btuwu6.png",
+      },
+      {
+        name: "Redux",
+        url: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055614/Portfolio/Tecnologias/redux_mpacqz.png",
+      },
+      {
+        name: "Tailwind CSS",
+        url: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055605/Portfolio/Tecnologias/tailwind_kexn4n.png",
+      },
+    ],
+  },
 ];
