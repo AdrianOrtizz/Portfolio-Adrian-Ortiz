@@ -3,8 +3,8 @@ import styles from "../About.module.scss";
 const DownloadButton: React.FC = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Adrian_Ortiz_CV.pdf";
-    link.download = "Adrian_Ortiz_CV.pdf";
+    link.href = "/Resume_Adrian_Ortiz_FullStackDeveloper.pdf";
+    link.download = "Resume_Adrian_Ortiz_FullStackDeveloper.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
