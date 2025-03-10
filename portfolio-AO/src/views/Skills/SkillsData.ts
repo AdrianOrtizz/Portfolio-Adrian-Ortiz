@@ -56,4 +56,12 @@ export const skillsData: skill[] = [
     name: "Tailwind",
     URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055605/Portfolio/Tecnologias/tailwind_kexn4n.png",
   },
+  {
+    name: "MongoDB",
+    URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1741609921/Portfolio/Tecnologias/MongoDB_id11t6.png",
+  },
+  {
+    name: "Mongoose",
+    URL: "https://res.cloudinary.com/djd7b0upe/image/upload/v1741609530/Portfolio/Tecnologias/mongoose_go0fx0.png",
+  },
 ];
