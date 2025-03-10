@@ -1,6 +1,6 @@
 # Adrian Ortiz Portfolio
 
-Hola, soy Adrian Ortiz, soy desarrollador web full stack, tengo 21 años y soy de Buenos Aires. Este es mi portfolio donde se pueden ver mis proyectos hasta la fecha y en donde pueden encontrar mis datos de contacto.
+Hola, soy Adrian Ortiz, soy desarrollador web full stack, tengo 22 años y soy de Buenos Aires. Este es mi portfolio donde se pueden ver mis proyectos hasta la fecha y en donde pueden encontrar mis datos de contacto.
 
 ## Indice
 
