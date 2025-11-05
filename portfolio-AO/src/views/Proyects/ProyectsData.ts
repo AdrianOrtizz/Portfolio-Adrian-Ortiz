@@ -200,4 +200,37 @@ export const proyects: proyectData[] = [
       },
     ],
   },
+  {
+    name: "Gifzz",
+    imgURL:
+      "https://res.cloudinary.com/djd7b0upe/image/upload/v1762341960/Portfolio/Proyectos/Gifzz.png",
+    videoURL: "https://www.youtube.com/embed/CRHZ77sA-Xo",
+    gitHubURL: "https://github.com/AdrianOrtizz/Gifs-gallery",
+    description:
+      "Gifzz es una aplicación web que permite explorar, buscar y descargar GIFs de manera rápida y divertida. Su interfaz está diseñada para ofrecer una experiencia fluida e intuitiva, con scroll infinito para navegar sin interrupciones y una sección especial de GIFs aleatorios que sorprende al usuario con cada actualización. El proyecto consume la API de Giphy para obtener el contenido.",
+    technologies: [
+      {
+        name: "React",
+        url: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055613/Portfolio/Tecnologias/react_be94ej.png",
+      },
+
+      {
+        name: "Zustand",
+        url: "https://res.cloudinary.com/djd7b0upe/image/upload/v1762340943/Portfolio/Tecnologias/Zustand_icyju5.png",
+      },
+
+      {
+        name: "Tailwind CSS",
+        url: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055605/Portfolio/Tecnologias/tailwind_kexn4n.png",
+      },
+      {
+        name: "NodeJS",
+        url: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055608/Portfolio/Tecnologias/node_lknncm.png",
+      },
+      {
+        name: "Express",
+        url: "https://res.cloudinary.com/djd7b0upe/image/upload/v1716055609/Portfolio/Tecnologias/expressss_xgwtrf.png",
+      },
+    ],
+  },
 ];
