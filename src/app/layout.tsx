@@ -15,11 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`antialiased relative`}>
-        <Cursor />
+    <html lang="es" className="dark" style={{ colorScheme: "dark" }}>
+      <body className="bg-[#050505] antialiased selection:bg-primary/30 min-h-screen flex flex-col">
         <Background />
-        <main className="relative z-10">{children}</main>
+        <Cursor />
+        <div className="relative flex-1 flex flex-col">{children}</div>
       </body>
     </html>
   );
