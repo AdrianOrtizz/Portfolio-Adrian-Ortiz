@@ -25,7 +25,10 @@ const ProjectCard = ({
   }
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       onMouseMove={handleMouseMove}
       className={`group relative rounded-3xl border border-white/10 bg-[#0a0a0a] p-8 overflow-hidden ${className}`}
     >
@@ -59,7 +62,7 @@ const ProjectCard = ({
             ))}
           </div>
 
-          <div className="mt-2">
+          <div className="pt-2">
             <a href={youTube} target="_blank" rel="noopener noreferrer">
               <YouTube className="w-7 h-7 inline-block mr-2" />
             </a>
@@ -70,7 +73,7 @@ const ProjectCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
