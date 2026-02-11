@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className="bg-[#050505] antialiased selection:bg-primary/30 min-h-screen flex flex-col">
         <Background />
         <Cursor />
-        <div className="relative flex-1 flex flex-col">{children}</div>
+        <div className="relative z-10 flex-1 flex flex-col">{children}</div>
       </body>
     </html>
   );
