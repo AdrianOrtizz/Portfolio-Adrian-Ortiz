@@ -1,7 +1,6 @@
 "use client";
 
 import { IExperience } from "@/dataAux/experienceData";
-
 import { motion } from "framer-motion";
 
 const ExperienceItem = ({
@@ -11,37 +10,49 @@ const ExperienceItem = ({
   description,
   achievements,
 }: IExperience) => (
-  <motion.div
-    initial={{ opacity: 0, x: -20 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true }}
-    className="relative pl-8 pb-12 border-l border-white/10 last:pb-0"
-  >
-    <div className="absolute left-[-5px] top-0 h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_10px_rgba(139,92,246,0.5)]" />
+  <div className="group relative pl-8 pb-12 border-l border-zinc-800 last:pb-0 transition-colors duration-500 hover:border-primary/50">
+    <div className="absolute left-[-5.5px] top-0 h-[11px] w-[11px] rounded-full bg-zinc-900 border border-zinc-700 group-hover:bg-primary group-hover:border-primary group-hover:shadow-[0_0_20px_rgba(139,92,246,0.8)] transition-all duration-500 z-10" />
 
-    <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-      <div>
-        <h3 className="text-xl font-bold text-white">{role}</h3>
-        <p className="text-primary font-medium">{company}</p>
+    <motion.div
+      whileHover={{ x: 10 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    >
+      <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+        <div>
+          <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors">
+            {role}
+          </h3>
+          <p className="text-zinc-300 font-semibold">{company}</p>
+        </div>
+        <span className="text-xs text-zinc-500 font-mono bg-zinc-900/80 border border-zinc-800 px-3 py-1 rounded-full">
+          {period}
+        </span>
       </div>
-      <span className="text-sm text-gray-500 font-mono mt-1 md:mt-0">
-        {period}
-      </span>
-    </div>
 
-    <p className="text-gray-400 mb-4 leading-relaxed max-w-3xl">
-      {description}
-    </p>
+      <p className="text-zinc-400 mb-6 leading-relaxed max-w-3xl text-[15px]">
+        {description}
+      </p>
 
-    <ul className="space-y-2">
-      {achievements.map((item: string, i: number) => (
-        <li key={i} className="text-sm text-gray-500 flex items-start gap-2">
-          <span className="text-primary mt-1">▹</span>
-          {item}
-        </li>
-      ))}
-    </ul>
-  </motion.div>
+      <ul className="grid grid-cols-1 gap-3">
+        {achievements.map((item, i) => (
+          <motion.li
+            key={i}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: i * 0.1 }}
+            className="text-sm text-zinc-500 flex items-start gap-3 group/item"
+          >
+            <span className="text-primary/60 mt-1 group-hover/item:text-primary transition-colors">
+              ▹
+            </span>
+            <span className="group-hover/item:text-zinc-300 transition-colors">
+              {item}
+            </span>
+          </motion.li>
+        ))}
+      </ul>
+    </motion.div>
+  </div>
 );
 
 export default ExperienceItem;
