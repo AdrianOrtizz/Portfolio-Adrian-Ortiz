@@ -1,6 +1,6 @@
 import { email, githubURL, linkedinURL } from "@/dataAux/contactData";
 
-import { Mail } from "lucide-react";
+import { FileText, Mail } from "lucide-react";
 import { LinkedIn, GitHub } from "@/components/UI/Icons";
 
 import CopyButton from "./CopyButton";
@@ -22,6 +22,16 @@ const ContactLinks = () => {
           , hablemos.
         </p>
       </div>
+
+      <a
+        href="/Adrian_Ortiz_FULL_STACK_DEVELOPER_CV.pdf"
+        download="Adrian_Ortiz_FULL_STACK_DEVELOPER_CV.pdf"
+      >
+        <button className="flex-1 p-5 rounded-2xl border border-zinc-800 bg-zinc-900/30 flex items-center gap-4 hover:bg-zinc-800/50 transition-all group">
+          <FileText size={18} />
+          Descargar CV
+        </button>
+      </a>
 
       <div className="space-y-4">
         <div className="group p-5 rounded-2xl border border-zinc-800 bg-zinc-900/30 flex items-center justify-between hover:border-zinc-600 transition-all">
