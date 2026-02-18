@@ -3,7 +3,7 @@ import { projectsData } from "@/dataAux/projectsData";
 
 const Projects = () => {
   return (
-    <section className="py-24 px-6 w-7xl mx-auto">
+    <section id="projects" className="py-24 px-6 w-7xl mx-auto">
       <h2 className="text-3xl font-bold mb-12 text-center md:text-left">
         Proyectos{" "}
         <span className="text-primary text-sm font-mono ml-2">/01</span>
