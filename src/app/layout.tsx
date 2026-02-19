@@ -38,7 +38,9 @@ export default function RootLayout({
         <Background />
         <Cursor />
         <MusicPlayer />
-        <div className="relative z-10 flex-1 flex flex-col">{children}</div>
+        <div className="relative z-10 flex-1 flex flex-col overflow-x-hidden w-full">
+          {children}
+        </div>
       </body>
     </html>
   );
