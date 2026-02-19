@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Background from "@/components/UI/Background";
 import Cursor from "@/components/UI/Cursor";
+import MusicPlayer from "@/components/UI/MusicPlayer";
 
 export const metadata: Metadata = {
   title: "Adrian Ortiz Portfolio",
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className="bg-[#050505] antialiased selection:bg-primary/30 min-h-screen flex flex-col">
         <Background />
         <Cursor />
+        <MusicPlayer />
         <div className="relative z-10 flex-1 flex flex-col">{children}</div>
       </body>
     </html>
