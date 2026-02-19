@@ -23,7 +23,7 @@ const Background = () => {
   }, [mouseX, mouseY]);
 
   return (
-    <div className="absolute inset-0 z-10 bg-[#050505]">
+    <div className="absolute inset-0 z-10 overflow-x-hidden bg-[#050505]">
       <motion.div
         style={{ x: springX, y: springY }}
         className="relative h-full w-full"
