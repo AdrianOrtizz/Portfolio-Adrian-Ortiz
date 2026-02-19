@@ -1,11 +1,28 @@
 "use client";
-import dynamic from "next/dynamic";
 
+import { useState, useEffect } from "react";
+
+import dynamic from "next/dynamic";
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
 
 const Cursor = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
+
+  if (!isDesktop) return null;
+
   return (
     <AnimatedCursor
       innerSize={8}
@@ -24,6 +41,7 @@ const Cursor = () => {
         "button",
         ".link",
         'input[type="text"]',
+        'input[type="email"]',
         "select",
         "textarea",
         '[data-cursor="pointer"]',

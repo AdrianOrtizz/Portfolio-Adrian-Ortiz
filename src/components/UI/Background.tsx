@@ -12,7 +12,6 @@ const Background = () => {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      // Calculamos el desplazamiento (30 es la intensidad)
       const x = (e.clientX / window.innerWidth - 0.5) * 60;
       const y = (e.clientY / window.innerHeight - 0.5) * 60;
       mouseX.set(x);
@@ -24,13 +23,11 @@ const Background = () => {
   }, [mouseX, mouseY]);
 
   return (
-    <div className="absolute inset-0 -z-10 overflow-hidden bg-[#050505]">
-      {/* Contenedor que reacciona al mouse */}
+    <div className="absolute inset-0 z-10 bg-[#050505]">
       <motion.div
         style={{ x: springX, y: springY }}
         className="relative h-full w-full"
       >
-        {/* Aura Púrpura */}
         <motion.div
           animate={{
             scale: [0.8, 1.2, 0.8],
@@ -44,7 +41,6 @@ const Background = () => {
           className="absolute top-10 left-[30%] h-[500px] w-[500px] rounded-full bg-violet-600 blur-[100px]"
         />
 
-        {/* Aura Cian */}
         <motion.div
           animate={{
             scale: [1.2, 0.8, 1.2],
