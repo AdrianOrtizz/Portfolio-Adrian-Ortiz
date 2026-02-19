@@ -30,10 +30,10 @@ const ProjectCard = ({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       onMouseMove={handleMouseMove}
-      className={`group relative rounded-3xl border border-white/10 bg-[#0a0a0a] p-8 overflow-hidden ${className}`}
+      className={`group relative rounded-3xl border border-white/10 bg-[#0a0a0a] p-6 md:p-8 overflow-hidden transition-colors hover:border-primary/20 ${className}`}
     >
       <motion.div
-        className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 hidden md:block"
         style={{
           background: useMotionTemplate`
             radial-gradient(
@@ -45,13 +45,17 @@ const ProjectCard = ({
         }}
       />
       <div className="relative z-10 flex h-full flex-col justify-between">
-        <div>
-          <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-          <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
+        <div className="mb-6">
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+            {title}
+          </h3>
+          <p className="text-gray-400 text-sm leading-relaxed  md:line-clamp-none">
+            {description}
+          </p>
         </div>
 
         <div>
-          <div className="mt-6 flex flex-wrap gap-2 ">
+          <div className="flex flex-wrap gap-2">
             {tags.map((tag: string) => (
               <span
                 key={tag}
@@ -62,13 +66,13 @@ const ProjectCard = ({
             ))}
           </div>
 
-          <div className="pt-2">
+          <div className="pt-4 flex items-center gap-4">
             <a href={youTube} target="_blank" rel="noopener noreferrer">
-              <YouTube className="w-7 h-7 inline-block mr-2" />
+              <YouTube className="w-6 h-6 md:w-7 md:h-7" />
             </a>
 
             <a href={gitHub} target="_blank" rel="noopener noreferrer">
-              <GitHub className="w-7 h-7 inline-block mr-2" />
+              <GitHub className="w-6 h-6 md:w-7 md:h-7" />
             </a>
           </div>
         </div>

@@ -11,12 +11,12 @@ const ContactForm = () => {
     useContact();
 
   return (
-    <div className="relative group">
+    <div className="relative group w-full">
       <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
 
       <form
         onSubmit={handleSubmit(onSubmitEmail)}
-        className="relative bg-zinc-900/70 backdrop-blur-xl p-8 rounded-2xl border border-zinc-800 space-y-5"
+        className="relative bg-zinc-900/70 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-zinc-800 space-y-5"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <FormField
@@ -42,7 +42,7 @@ const ContactForm = () => {
           </label>
           <textarea
             {...register("message")}
-            rows={5}
+            rows={4}
             placeholder="¿En qué puedo ayudarte?"
             className={`w-full bg-zinc-950/50 border ${
               errors.message ? "border-red-500/50" : "border-zinc-800"
@@ -54,7 +54,7 @@ const ContactForm = () => {
         <button
           type="submit"
           disabled={isSending || status === "success"}
-          className={`w-full py-4 rounded-xl flex items-center justify-center gap-3 font-bold transition-all active:scale-[0.98] ${
+          className={`w-full py-3.5 rounded-xl flex items-center justify-center gap-3 font-bold transition-all active:scale-[0.98] ${
             status === "success"
               ? "bg-green-600 text-white shadow-[0_0_20px_rgba(22,163,74,0.4)]"
               : "bg-white text-black hover:bg-zinc-200 disabled:opacity-50"

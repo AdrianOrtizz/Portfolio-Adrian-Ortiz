@@ -20,13 +20,13 @@ const HeroButtons = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.4 }}
-      className="flex flex-col items-center justify-center gap-4 sm:flex-row"
+      className="flex flex-col items-center justify-center gap-4 sm:flex-row w-full"
     >
       <motion.button
         initial="initial"
         whileHover="hover"
         onClick={() => scrollToSection("projects")}
-        className="relative w-48 h-12 bg-white text-black font-bold rounded-full overflow-hidden transition-transform active:scale-95 flex items-center justify-center"
+        className="relative w-48 h-12 bg-white text-black font-bold rounded-full overflow-hidden active:scale-95 flex items-center justify-center transition-transform"
       >
         <motion.span
           variants={textVariants}
@@ -48,7 +48,7 @@ const HeroButtons = () => {
         initial="initial"
         whileHover="hover"
         onClick={() => scrollToSection("contact")}
-        className="relative w-48 h-12 border border-zinc-700 text-white font-bold rounded-full overflow-hidden transition-all active:scale-95 hover:bg-zinc-900 flex items-center justify-center"
+        className="relative w-48 h-12 border border-zinc-700 hover:bg-zinc-900 text-white font-bold rounded-full overflow-hidden active:scale-95 flex  items-center justify-center transition-transform"
       >
         <motion.span
           variants={textVariants}
