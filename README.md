@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Adrian Ortiz - Portfolio Profesional
 
-## Getting Started
+Este proyecto es mi portfolio personal, desarrollado con un enfoque de **alto rendimiento**, **UX minimalista** y **arquitectura escalable**. He priorizado la experiencia del usuario y la optimización técnica para lograr un producto premium.
 
-First, run the development server:
+## 🛠️ Stack Tecnológico
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Framework:** Next.js 16 (App Router) utilizando **Turbopack** para una compilación ultra rápida.
+- **Lenguaje:** TypeScript para un desarrollo robusto y libre de errores de tipo.
+- **Animaciones:** Framer Motion para transiciones fluidas y micro-interacciones.
+- **Estilos:** Tailwind CSS con una paleta de colores minimalista y modo oscuro nativo.
+- **Despliegue:** Vercel para una integración continua y hosting de alta disponibilidad.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Características Destacadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🎵 Vibe Player (Spotify Integration)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Implementé un reproductor de música personalizado que no solo es estético, sino funcional y proactivo.
 
-## Learn More
+- **Progressive Disclosure:** El componente inicia con una invitación de texto que se "estira" para llamar la atención del usuario y luego se contrae a un botón circular minimalista para no estorbar el contenido.
+- **Renderizado Persistente:** La música sigue sonando en segundo plano incluso cuando el reproductor se oculta, gracias a una lógica de visibilidad que evita desmontar el iframe de Spotify.
 
-To learn more about Next.js, take a look at the following resources:
+### 📈 Optimización de Metadatos y SEO
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **MetadataBase:** Configuración de la URL base para asegurar que los metadatos de OpenGraph y Twitter se resuelvan correctamente en producción.
+- **File-based Metadata:** Gestión automatizada de iconos (favicon, icon, apple-icon) desde la carpeta `public`, optimizando la carga del `<head>`.
+- **OpenGraph Premium:** Previsualización personalizada para redes sociales con una descripción enfocada en la resolución de problemas técnicos.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Performance
 
-## Deploy on Vercel
+El proyecto ha sido optimizado para pasar los controles más exigentes:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Compilación:** Finalizada en tiempos récord (3.4s) gracias al uso de Turbopack.
+- **Static Rendering:** Las rutas se pre-renderizan de forma estática, garantizando una carga casi instantánea para el usuario final.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 Instalación y Uso
+
+1. Clonar el repositorio.
+2. Instalar dependencias: `npm install`.
+3. Correr en modo desarrollo: `npm run dev`.
+4. Construir para producción: `npm run build`.
+
+---
+
+_Adrian Ortiz | Full Stack Developer_
