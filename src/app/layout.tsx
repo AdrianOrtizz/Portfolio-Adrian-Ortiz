@@ -6,8 +6,25 @@ import Cursor from "@/components/UI/Cursor";
 import MusicPlayer from "@/components/UI/MusicPlayer";
 
 export const metadata: Metadata = {
-  title: "Adrian Ortiz Portfolio",
-  description: "",
+  metadataBase: new URL("https://adrianortiz.vercel.app/"),
+  title: "Adrian Ortiz | Full Stack Developer & Problem Solver",
+  description:
+    "Portfolio profesional de Adrian Ortiz, Full Stack Developer especializado en transformar necesidades de negocio en soluciones técnicas robustas con enfoque en performance y UX.",
+  openGraph: {
+    title: "Adrian Ortiz | Full Stack Developer",
+    description: "Problem Solver enfocado en soluciones técnicas robustas.",
+    url: "https://adrianortiz.vercel.app/",
+    siteName: "Adrian Ortiz Portfolio",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "es_AR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
