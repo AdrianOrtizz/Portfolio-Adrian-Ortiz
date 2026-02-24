@@ -35,8 +35,8 @@ El proyecto ha sido optimizado para pasar los controles más exigentes:
 ## 📦 Instalación y Uso
 
 1. Clonar el repositorio.
-2. Instalar dependencias: `npm install`.
-3. Correr en modo desarrollo: `npm run dev --legacy-peer-deps`.
+2. Instalar dependencias: `npm install --legacy-peer-deps`.
+3. Correr en modo desarrollo: `npm run dev`.
 4. Construir para producción: `npm run build`.
 
 ---
