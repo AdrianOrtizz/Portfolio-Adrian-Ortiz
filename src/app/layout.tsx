@@ -5,6 +5,8 @@ import Background from "@/components/UI/Background";
 import Cursor from "@/components/UI/Cursor";
 import MusicPlayer from "@/components/UI/MusicPlayer";
 
+import { Analytics } from "@vercel/analytics/next";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://adrianortiz.vercel.app/"),
   title: "Adrian Ortiz | Full Stack Developer & Problem Solver",
@@ -40,6 +42,7 @@ export default function RootLayout({
         <MusicPlayer />
         <div className="relative z-10 flex-1 flex flex-col overflow-x-hidden w-full">
           {children}
+          <Analytics />
         </div>
       </body>
     </html>
