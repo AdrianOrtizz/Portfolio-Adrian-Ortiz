@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+// @ts-ignore
 import "./globals.css";
+import type { Metadata } from "next";
 
 import Background from "@/components/UI/Background";
 import Cursor from "@/components/UI/Cursor";
