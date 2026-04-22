@@ -4,6 +4,7 @@ import { MouseEvent } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 import { YouTube, GitHub } from "../../../UI/Icons";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 import { Project } from "@/dataAux/projectsData";
 
@@ -14,6 +15,7 @@ const ProjectCard = ({
   youTube,
   gitHub,
   className,
+  demo,
 }: Project) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
@@ -74,6 +76,12 @@ const ProjectCard = ({
             <a href={gitHub} target="_blank" rel="noopener noreferrer">
               <GitHub className="w-6 h-6 md:w-7 md:h-7" />
             </a>
+
+            {demo && (
+              <a href={demo} target="_blank" rel="noopener noreferrer">
+                <SquareArrowOutUpRight className="w-6 h-6 md:w-7 md:h-7" />
+              </a>
+            )}
           </div>
         </div>
       </div>

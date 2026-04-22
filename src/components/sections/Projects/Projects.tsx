@@ -22,6 +22,7 @@ const Projects = () => {
             gitHub={project.gitHub}
             tags={project.tags}
             className={project.className}
+            demo={project.demo}
           />
         ))}
       </div>

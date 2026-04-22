@@ -5,9 +5,47 @@ export interface Project {
   gitHub: string;
   youTube: string;
   className: string;
+  demo?: string;
 }
 
 export const projectsData: Project[] = [
+  {
+    title: "Habitzz",
+    description:
+      "Esta plataforma full-stack transforma la gestión de hábitos y metas semanales en una experiencia fluida e intuitiva gracias a su UI reactiva. Sin embargo, el verdadero valor está bajo el capó: cuenta con una arquitectura robusta apoyada en Next.js, Express y MongoDB, con un estado de servidor optimizado y un motor de cálculo de fechas blindado contra inconsistencias de zonas horarias (Timezone-proof). Un proyecto diseñado no solo para verse bien, sino para funcionar sin fallas en entornos de producción.",
+    tags: [
+      "React",
+      "Next.js",
+      "Tailwind",
+      "TanStack Query",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+    ],
+    gitHub: "https://github.com/AdrianOrtizz/habits-saas",
+    youTube: "https://www.youtube.com/watch?v=OGnYNRL4dvk",
+    demo: "https://habitzz-track.vercel.app/",
+    className: "md:col-span-2 md:row-span-1",
+  },
+  {
+    title: "TizzTube Downloader",
+    description:
+      "Aplicación de procesamiento de medios audiovisuales que permite la extracción y descarga de flujos de video/audio en tiempo real. Implementé un sistema de historial basado en persistencia en el lado del cliente (LocalStorage) y optimicé el renderizado de reproductores dinámicos mediante el consumo de APIs de terceros.",
+    tags: ["React", "Next.js", "Redux Toolkit", "Tailwind"],
+    youTube: "https://www.youtube.com/watch?v=wh5SKy4wWaU",
+    gitHub: "https://github.com/AdrianOrtizz/TizzTube-downloader",
+    className: "md:col-span-1 md:row-span-1",
+  },
+  {
+    title: "Pokedex",
+    description:
+      "Aplicación de visualización de datos de alto rendimiento que consume la PokeAPI. Implementé un motor de búsqueda y filtrado algorítmico, optimizando el renderizado de estados complejos para ofrecer una navegación fluida entre perfiles detallados de personajes.",
+    tags: ["React", "Redux", "Node.js", "Express", "PostgreSQL", "Sequelize"],
+    youTube: "https://www.youtube.com/watch?v=T-SNhqNqT18",
+    gitHub: "https://github.com/AdrianOrtizz/PI-Pokemon-main",
+    className: "md:col-span-1 md:row-span-1",
+  },
   {
     title: "UUID Store",
     description:
@@ -25,15 +63,6 @@ export const projectsData: Project[] = [
     gitHub: "https://github.com/Agus-Albarracin/uuid-store",
     youTube: "https://www.youtube.com/watch?v=wOM3vOVKjNI",
     className: "md:col-span-2 md:row-span-1",
-  },
-  {
-    title: "Pokedex",
-    description:
-      "Aplicación de visualización de datos de alto rendimiento que consume la PokeAPI. Implementé un motor de búsqueda y filtrado algorítmico, optimizando el renderizado de estados complejos para ofrecer una navegación fluida entre perfiles detallados de personajes.",
-    tags: ["React", "Redux", "Node.js", "Express", "PostgreSQL", "Sequelize"],
-    youTube: "https://www.youtube.com/watch?v=T-SNhqNqT18",
-    gitHub: "https://github.com/AdrianOrtizz/PI-Pokemon-main",
-    className: "md:col-span-1 md:row-span-1",
   },
   {
     title: "Rick And Morty App",
@@ -60,16 +89,7 @@ export const projectsData: Project[] = [
     tags: ["React", "Next.js", "Tailwind"],
     youTube: "https://www.youtube.com/watch?v=1YiMWxrVo2o",
     gitHub: "https://github.com/AdrianOrtizz/instagram_stalker_app",
-    className: "md:col-span-2 md:row-span-1",
-  },
-  {
-    title: "TizzTube Downloader",
-    description:
-      "Aplicación de procesamiento de medios audiovisuales que permite la extracción y descarga de flujos de video/audio en tiempo real. Implementé un sistema de historial basado en persistencia en el lado del cliente (LocalStorage) y optimicé el renderizado de reproductores dinámicos mediante el consumo de APIs de terceros.",
-    tags: ["React", "Next.js", "Redux Toolkit", "Tailwind"],
-    youTube: "https://www.youtube.com/watch?v=wh5SKy4wWaU",
-    gitHub: "https://github.com/AdrianOrtizz/TizzTube-downloader",
-    className: "md:col-span-2 md:row-span-1",
+    className: "md:col-span-1 md:row-span-1",
   },
   {
     title: "Gifzz",
@@ -79,6 +99,6 @@ export const projectsData: Project[] = [
     tags: ["React", "Zustand", "Node.js", "Express", "Tailwind"],
     youTube: "https://www.youtube.com/watch?v=CRHZ77sA-Xo",
     gitHub: "https://github.com/AdrianOrtizz/Gifs-gallery",
-    className: "md:col-span-1 md:row-span-1",
+    className: "md:col-span-2 lg:col-span-1 md:row-span-1",
   },
 ];
