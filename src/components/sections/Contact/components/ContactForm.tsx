@@ -4,9 +4,11 @@ import FormField from "./FormField";
 import ErrorMessage from "./MessageError";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 import { useContact } from "@/hooks/useContact";
 
 const ContactForm = () => {
+  const { t } = useLanguage();
   const { register, handleSubmit, errors, onSubmitEmail, isSending, status } =
     useContact();
 
@@ -20,17 +22,17 @@ const ContactForm = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <FormField
-            label="Nombre"
+            label={t.sections.formName}
             name="user_name"
-            placeholder="Tu nombre"
+            placeholder={t.sections.namePlaceholder}
             register={register}
             error={errors.user_name?.message}
           />
           <FormField
-            label="Email"
+            label={t.sections.formEmail}
             name="user_email"
             type="email"
-            placeholder="email@ejemplo.com"
+            placeholder={t.sections.emailPlaceholder}
             register={register}
             error={errors.user_email?.message}
           />
@@ -38,12 +40,12 @@ const ContactForm = () => {
 
         <div className="space-y-2">
           <label className="text-sm font-medium text-zinc-400 ml-1">
-            Mensaje
+            {t.sections.formMessage}
           </label>
           <textarea
             {...register("message")}
             rows={4}
-            placeholder="¿En qué puedo ayudarte?"
+            placeholder={t.sections.messagePlaceholder}
             className={`w-full bg-zinc-950/50 border ${
               errors.message ? "border-red-500/50" : "border-zinc-800"
             } rounded-xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all placeholder:text-zinc-700 resize-none`}
@@ -70,10 +72,10 @@ const ContactForm = () => {
 
           <span>
             {isSending
-              ? "Enviando..."
+              ? t.sections.sending
               : status === "success"
-                ? "¡Mensaje Enviado!"
-                : "Enviar Mensaje"}
+                ? t.sections.messageSent
+                : t.sections.sendMessage}
           </span>
         </button>
 
@@ -84,7 +86,7 @@ const ContactForm = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-red-400 text-sm text-center flex items-center justify-center gap-2"
             >
-              <AlertCircle size={16} /> Error de conexión. Reintenta.
+              <AlertCircle size={16} /> {t.sections.errorConnection}
             </motion.p>
           )}
         </AnimatePresence>

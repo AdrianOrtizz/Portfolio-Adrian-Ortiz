@@ -3,8 +3,10 @@
 import { Eye, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import { scrollToSection } from "@/hooks/useHeroButtons";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const HeroButtons = () => {
+  const { t } = useLanguage();
   const textVariants = {
     initial: { x: 0 },
     hover: { x: -12 },
@@ -32,7 +34,7 @@ const HeroButtons = () => {
           variants={textVariants}
           transition={{ type: "spring", stiffness: 300, damping: 25 }}
         >
-          Ver Proyectos
+          {t.hero.btnProjects}
         </motion.span>
 
         <motion.span
@@ -54,7 +56,7 @@ const HeroButtons = () => {
           variants={textVariants}
           transition={{ type: "spring", stiffness: 300, damping: 25 }}
         >
-          Hablemos
+          {t.hero.btnContact}
         </motion.span>
 
         <motion.span

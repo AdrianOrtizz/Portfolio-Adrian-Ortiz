@@ -1,7 +1,12 @@
+"use client";
+
 import ContactForm from "./components/ContactForm";
 import ContactLinks from "./components/ContactLinks";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Contact = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative py-24 px-4 max-w-6xl mx-auto" id="contact">
       <div className="absolute top-50 -left-40 md:-left-80 w-[400px] md:w-[500px] h-[400px] md:h-[500px] bg-blue-600/5 rounded-full blur-[100px] pointer-events-none" />
@@ -9,10 +14,10 @@ const Contact = () => {
 
       <div className="text-center mb-12 md:mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
-          Hablemos
+          {t.sections.contactTitle}
         </h2>
         <p className="text-zinc-500 uppercase tracking-widest text-[10px] md:text-xs font-semibold">
-          Contacto / 04
+          {t.sections.contactLabel}
         </p>
       </div>
 

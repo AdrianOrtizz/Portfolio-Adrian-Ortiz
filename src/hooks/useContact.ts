@@ -2,7 +2,9 @@
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { contactSchema, type ContactFormData } from "./schema";
+import { useMemo } from "react";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getContactSchema, type ContactFormData } from "./schema";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { email } from "@/dataAux/contactData";
@@ -20,13 +22,16 @@ export const useContact = () => {
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
+  const { lang } = useLanguage();
+  const resolver = useMemo(() => zodResolver(getContactSchema(lang)), [lang]);
+
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
+    resolver,
     mode: "onTouched",
   });
 

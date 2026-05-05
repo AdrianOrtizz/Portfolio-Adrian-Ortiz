@@ -2,16 +2,21 @@
 import { motion } from "framer-motion";
 import { skillsData } from "@/dataAux/skillsData";
 
+import { useLanguage } from "@/hooks/useLanguage";
+
 const Skills = () => {
+  const { t } = useLanguage();
   return (
     <section
       id="skills"
       className="py-24 px-4 max-w-7xl mx-auto overflow-hidden"
     >
       <div className="text-center md:text-left mb-12 md:mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Tech Stack</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          {t.sections.skillsTitle}
+        </h2>
         <p className="text-gray-500 uppercase tracking-[0.2em] md:tracking-[0.3em] text-[10px] md:text-xs font-mono">
-          Herramientas y Tecnologías /03
+          {t.sections.skillsSubtitle}
         </p>
       </div>
 
