@@ -1,7 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Presentation = () => {
+  const { t } = useLanguage();
   return (
     <div className="max-w-4xl px-2">
       <motion.div
@@ -24,17 +26,11 @@ const Presentation = () => {
         transition={{ duration: 0.7, delay: 0.2 }}
         className="mb-10 text-base leading-relaxed text-gray-400 md:text-xl md:mb-12"
       >
-        Más de 4 años optimizando procesos de{" "}
-        <span className="text-white font-semibold">
-          administración y logística
-        </span>
-        , ahora aplicados al desarrollo de software. Experto en transformar
-        necesidades de negocio en
-        <span className="text-white font-semibold">
-          {" "}
-          soluciones técnicas robustas
-        </span>{" "}
-        con un enfoque absoluto en la experiencia del cliente.
+        {t.hero.paragraphPrefix}{" "}
+        <span className="text-white font-semibold">{t.hero.highlight1}</span>
+        {t.hero.paragraphMiddle}{" "}
+        <span className="text-white font-semibold">{t.hero.highlight2}</span>
+        {t.hero.paragraphSuffix}
       </motion.p>
     </div>
   );

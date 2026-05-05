@@ -6,8 +6,6 @@ import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { YouTube, GitHub } from "../../../UI/Icons";
 import { SquareArrowOutUpRight } from "lucide-react";
 
-import { Project } from "@/dataAux/projectsData";
-
 const ProjectCard = ({
   title,
   description,
@@ -16,7 +14,15 @@ const ProjectCard = ({
   gitHub,
   className,
   demo,
-}: Project) => {
+}: {
+  title: string;
+  description: string;
+  tags: string[];
+  gitHub: string;
+  youTube: string;
+  className: string;
+  demo?: string;
+}) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 

@@ -1,4 +1,9 @@
+"use client";
+
+import { useLanguage } from "@/hooks/useLanguage";
+
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,17 +19,15 @@ const Footer = () => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
             <span className="text-[10px] text-zinc-500 uppercase tracking-widest font-mono">
-              Disponible para nuevos proyectos
+              {t.sections.footerAvailable}
             </span>
           </div>
         </div>
 
         <div className="text-center md:text-right">
           <p className="text-zinc-600 text-[11px] leading-relaxed uppercase tracking-tighter">
-            Diseñado y desarrollado con <br className="md:hidden" />
-            <span className="text-zinc-400">
-              Next.js • Tailwind • Framer Motion
-            </span>
+            {t.sections.footerMadeWith} <br className="md:hidden" />
+            <span className="text-zinc-400">{t.sections.footerTech}</span>
           </p>
         </div>
       </div>

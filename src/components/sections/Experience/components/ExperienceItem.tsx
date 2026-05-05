@@ -1,6 +1,5 @@
 "use client";
 
-import { IExperience } from "@/dataAux/experienceData";
 import { motion } from "framer-motion";
 
 const ExperienceItem = ({
@@ -9,7 +8,13 @@ const ExperienceItem = ({
   period,
   description,
   achievements,
-}: IExperience) => (
+}: {
+  company: string;
+  role: string;
+  period: string;
+  description: string;
+  achievements: string[];
+}) => (
   <div className="group relative pl-6 md:pl-8 pb-12 border-l border-zinc-800 last:pb-0 transition-colors duration-500 hover:border-primary/50">
     <div className="absolute left-[-5.5px] top-0 h-[11px] w-[11px] rounded-full bg-zinc-900 border border-zinc-700 group-hover:bg-primary group-hover:border-primary group-hover:shadow-[0_0_20px_rgba(139,92,246,0.8)] transition-all duration-500 z-10" />
 
