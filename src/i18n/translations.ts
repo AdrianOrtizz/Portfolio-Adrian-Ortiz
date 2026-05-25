@@ -69,6 +69,10 @@ export type Translations = {
     messageMin: string;
     messageMax: string;
   };
+  notFound: {
+    description: string;
+    backButton: string;
+  };
 };
 
 const translations: Record<Language, Translations> = {
@@ -126,6 +130,10 @@ const translations: Record<Language, Translations> = {
       messageMin: "El mensaje debe ser más descriptivo (mín. 10 caracteres)",
       messageMax: "El mensaje no puede exceder los 1000 caracteres",
     },
+    notFound: {
+      description: "Eeh, a dónde ibas jejeje 👀",
+      backButton: "Volver al inicio",
+    },
   },
   en: {
     hero: {
@@ -179,6 +187,10 @@ const translations: Record<Language, Translations> = {
       emailInvalid: "Please enter a valid email",
       messageMin: "Message must be more descriptive (min. 10 characters)",
       messageMax: "Message cannot exceed 1000 characters",
+    },
+    notFound: {
+      description: "Oops, where were you going hehe 👀",
+      backButton: "Back to home",
     },
   },
 };
