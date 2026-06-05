@@ -232,7 +232,7 @@ export default function ProjectCarousel({
                     {currentProject.title}
                   </h3>
                   {/* Fixed-height description box to prevent layout jumping & scrollbars */}
-                  <div className="h-[260px] sm:h-[190px] lg:h-[220px] overflow-hidden pr-1">
+                  <div className="min-h-[190px] sm:h-[190px] lg:min-h-[260px] overflow-hidden pr-1">
                     <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-4 font-normal">
                       {currentProject.description}
                     </p>
@@ -241,7 +241,7 @@ export default function ProjectCarousel({
 
                 <div>
                   {/* Tech Tags with fixed height to prevent layout shifts */}
-                  <div className="flex flex-wrap gap-2 h-[80px] lg:h-[56px] overflow-hidden mb-6">
+                  <div className="flex flex-wrap gap-2 min-h-[80px] lg:min-h-[56px] overflow-hidden mb-6">
                     {currentProject.tags.map((tag: string) => (
                       <span
                         key={tag}
