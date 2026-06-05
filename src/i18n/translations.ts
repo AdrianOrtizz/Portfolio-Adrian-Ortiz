@@ -8,6 +8,8 @@ export type Project = {
   youTube: string;
   className: string;
   demo?: string;
+  image?: string;
+  video?: string;
 };
 
 export type Experience = {

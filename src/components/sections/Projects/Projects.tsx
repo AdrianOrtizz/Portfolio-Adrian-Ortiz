@@ -1,10 +1,17 @@
 "use client";
 
-import ProjectCard from "./components/ProjectCard";
+import { useState } from "react";
+import ProjectCarousel from "./components/ProjectCarousel";
+import VideoModal from "./components/VideoModal";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const Projects = () => {
   const { t, projects } = useLanguage();
+  const [activeVideo, setActiveVideo] = useState<{
+    url: string;
+    title: string;
+  } | null>(null);
+
   return (
     <section
       id="projects"
@@ -14,20 +21,19 @@ const Projects = () => {
         {t.sections.projectsTitle}
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[400px]">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            title={project.title}
-            description={project.description}
-            youTube={project.youTube}
-            gitHub={project.gitHub}
-            tags={project.tags}
-            className={project.className}
-            demo={project.demo}
-          />
-        ))}
+      <div className="w-full">
+        <ProjectCarousel
+          projects={projects}
+          onPlayVideo={(url, title) => setActiveVideo({ url, title })}
+        />
       </div>
+
+      <VideoModal
+        isOpen={activeVideo !== null}
+        onClose={() => setActiveVideo(null)}
+        videoUrl={activeVideo?.url || ""}
+        projectTitle={activeVideo?.title || ""}
+      />
     </section>
   );
 };
