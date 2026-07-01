@@ -217,11 +217,11 @@ export const projectsData: Record<Language, Project[]> = {
       demo: "https://codasync.vercel.app/",
       className: "md:col-span-2 md:row-span-1",
       images: [
-        "/projects/CodaSync/Hero.webp",
-        "/projects/CodaSync/Info.webp",
-        "/projects/CodaSync/Plans.webp",
-        "/projects/CodaSync/QA.webp",
-        "/projects/CodaSync/SignUp.webp",
+        "/Projects/CodaSync/Hero.webp",
+        "/Projects/CodaSync/Info.webp",
+        "/Projects/CodaSync/Plans.webp",
+        "/Projects/CodaSync/QA.webp",
+        "/Projects/CodaSync/SignUp.webp",
       ],
     },
     {
@@ -243,11 +243,11 @@ export const projectsData: Record<Language, Project[]> = {
       demo: "https://habitzz-track.vercel.app/",
       className: "md:col-span-2 md:row-span-1",
       images: [
-        "/projects/Habitzz/Landing.webp",
-        "/projects/Habitzz/Dashboard.webp",
-        "/projects/Habitzz/CreateHabit.webp",
-        "/projects/Habitzz/Goals.webp",
-        "/projects/Habitzz/SignUp.webp",
+        "/Projects/Habitzz/Landing.webp",
+        "/Projects/Habitzz/Dashboard.webp",
+        "/Projects/Habitzz/CreateHabit.webp",
+        "/Projects/Habitzz/Goals.webp",
+        "/Projects/Habitzz/SignUp.webp",
       ],
     },
     {
@@ -259,8 +259,8 @@ export const projectsData: Record<Language, Project[]> = {
       gitHub: "https://github.com/AdrianOrtizz/instagram_stalker_app",
       className: "md:col-span-1 md:row-span-1",
       images: [
-        "/projects/InstagramStalker/Hero.webp",
-        "/projects/InstagramStalker/Info.webp",
+        "/Projects/InstagramStalker/Hero.webp",
+        "/Projects/InstagramStalker/Info.webp",
       ],
     },
 
@@ -273,9 +273,9 @@ export const projectsData: Record<Language, Project[]> = {
       gitHub: "https://github.com/AdrianOrtizz/PI-Pokemon-main",
       className: "md:col-span-1 md:row-span-1",
       images: [
-        "/projects/Pokedex/Landing.webp",
-        "/projects/Pokedex/List.webp",
-        "/projects/Pokedex/Detail.webp",
+        "/Projects/Pokedex/Landing.webp",
+        "/Projects/Pokedex/List.webp",
+        "/Projects/Pokedex/Detail.webp",
       ],
     },
     {
@@ -286,7 +286,7 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=wh5SKy4wWaU",
       gitHub: "https://github.com/AdrianOrtizz/TizzTube-downloader",
       className: "md:col-span-1 md:row-span-1",
-      images: ["/projects/YouTube/Hero.webp"],
+      images: ["/Projects/YouTube/Hero.webp"],
     },
     {
       title: "UUID Store",
@@ -305,7 +305,7 @@ export const projectsData: Record<Language, Project[]> = {
       gitHub: "https://github.com/Agus-Albarracin/uuid-store",
       youTube: "https://www.youtube.com/watch?v=wOM3vOVKjNI",
       className: "md:col-span-2 md:row-span-1",
-      images: ["/projects/UUID/Landing.webp"],
+      images: ["/Projects/UUID/Landing.webp"],
     },
     {
       title: "Rick And Morty App",
@@ -323,7 +323,7 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=AZ5fdddHnS4",
       gitHub: "https://github.com/AdrianOrtizz/PI_Rick_And_Morty",
       className: "md:col-span-1 md:row-span-1",
-      images: ["/projects/RyM/Main.webp", "/projects/RyM/LogIn.webp"],
+      images: ["/Projects/RyM/Main.webp", "/Projects/RyM/LogIn.webp"],
     },
 
     {
@@ -334,7 +334,7 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=CRHZ77sA-Xo",
       gitHub: "https://github.com/AdrianOrtizz/Gifs-gallery",
       className: "md:col-span-2 lg:col-span-1 md:row-span-1",
-      images: ["/projects/Gifzz/Main.webp"],
+      images: ["/Projects/Gifzz/Main.webp"],
     },
   ],
   en: [
@@ -355,11 +355,11 @@ export const projectsData: Record<Language, Project[]> = {
       demo: "https://codasync.vercel.app/",
       className: "md:col-span-2 md:row-span-1",
       images: [
-        "/projects/CodaSync/Hero.webp",
-        "/projects/CodaSync/Info.webp",
-        "/projects/CodaSync/Plans.webp",
-        "/projects/CodaSync/QA.webp",
-        "/projects/CodaSync/SignUp.webp",
+        "/Projects/CodaSync/Hero.webp",
+        "/Projects/CodaSync/Info.webp",
+        "/Projects/CodaSync/Plans.webp",
+        "/Projects/CodaSync/QA.webp",
+        "/Projects/CodaSync/SignUp.webp",
       ],
     },
     {
@@ -381,11 +381,11 @@ export const projectsData: Record<Language, Project[]> = {
       demo: "https://habitzz-track.vercel.app/",
       className: "md:col-span-2 md:row-span-1",
       images: [
-        "/projects/Habitzz/Landing.webp",
-        "/projects/Habitzz/Dashboard.webp",
-        "/projects/Habitzz/CreateHabit.webp",
-        "/projects/Habitzz/Goals.webp",
-        "/projects/Habitzz/SignUp.webp",
+        "/Projects/Habitzz/Landing.webp",
+        "/Projects/Habitzz/Dashboard.webp",
+        "/Projects/Habitzz/CreateHabit.webp",
+        "/Projects/Habitzz/Goals.webp",
+        "/Projects/Habitzz/SignUp.webp",
       ],
     },
     {
@@ -397,8 +397,8 @@ export const projectsData: Record<Language, Project[]> = {
       gitHub: "https://github.com/AdrianOrtizz/instagram_stalker_app",
       className: "md:col-span-1 md:row-span-1",
       images: [
-        "/projects/InstagramStalker/Hero.webp",
-        "/projects/InstagramStalker/Info.webp",
+        "/Projects/InstagramStalker/Hero.webp",
+        "/Projects/InstagramStalker/Info.webp",
       ],
     },
     {
@@ -410,9 +410,9 @@ export const projectsData: Record<Language, Project[]> = {
       gitHub: "https://github.com/AdrianOrtizz/PI-Pokemon-main",
       className: "md:col-span-1 md:row-span-1",
       images: [
-        "/projects/Pokedex/Landing.webp",
-        "/projects/Pokedex/List.webp",
-        "/projects/Pokedex/Detail.webp",
+        "/Projects/Pokedex/Landing.webp",
+        "/Projects/Pokedex/List.webp",
+        "/Projects/Pokedex/Detail.webp",
       ],
     },
     {
@@ -423,7 +423,7 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=wh5SKy4wWaU",
       gitHub: "https://github.com/AdrianOrtizz/TizzTube-downloader",
       className: "md:col-span-1 md:row-span-1",
-      images: ["/projects/YouTube/Hero.webp"],
+      images: ["/Projects/YouTube/Hero.webp"],
     },
     {
       title: "UUID Store",
@@ -442,7 +442,7 @@ export const projectsData: Record<Language, Project[]> = {
       gitHub: "https://github.com/Agus-Albarracin/uuid-store",
       youTube: "https://www.youtube.com/watch?v=wOM3vOVKjNI",
       className: "md:col-span-2 md:row-span-1",
-      images: ["/projects/UUID/Landing.webp"],
+      images: ["/Projects/UUID/Landing.webp"],
     },
     {
       title: "Rick And Morty App",
@@ -460,7 +460,7 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=AZ5fdddHnS4",
       gitHub: "https://github.com/AdrianOrtizz/PI_Rick_And_Morty",
       className: "md:col-span-1 md:row-span-1",
-      images: ["/projects/RyM/Main.webp", "/projects/RyM/LogIn.webp"],
+      images: ["/Projects/RyM/Main.webp", "/Projects/RyM/LogIn.webp"],
     },
 
     {
@@ -471,7 +471,7 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=CRHZ77sA-Xo",
       gitHub: "https://github.com/AdrianOrtizz/Gifs-gallery",
       className: "md:col-span-2 lg:col-span-1 md:row-span-1",
-      images: ["/projects/Gifzz/Main.webp"],
+      images: ["/Projects/Gifzz/Main.webp"],
     },
   ],
 };
