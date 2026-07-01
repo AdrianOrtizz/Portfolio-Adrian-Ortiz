@@ -21,7 +21,8 @@ interface ProjectCardProps {
 
 const getYoutubeId = (url?: string) => {
   if (!url) return null;
-  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+  const regExp =
+    /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
   const match = url.match(regExp);
   return match && match[2].length === 11 ? match[2] : null;
 };
@@ -114,7 +115,9 @@ const ProjectCard = ({
           loop
           playsInline
           className={`w-full h-full object-cover transform group-hover/media:scale-105 transition-transform duration-500 ease-out ${
-            isHovered ? "opacity-100" : "opacity-0 absolute inset-0 pointer-events-none"
+            isHovered
+              ? "opacity-100"
+              : "opacity-0 absolute inset-0 pointer-events-none"
           }`}
         />
       )}
@@ -154,7 +157,9 @@ const ProjectCard = ({
         }}
       />
 
-      <div className={`relative z-10 flex h-full flex-col justify-between gap-6 ${isWide ? "md:grid md:grid-cols-12 md:items-stretch" : ""}`}>
+      <div
+        className={`relative z-10 flex h-full flex-col justify-between gap-6 ${isWide ? "md:grid md:grid-cols-12 md:items-stretch" : ""}`}
+      >
         {isWide ? (
           <>
             {/* Wide layout: Side by side on desktop */}
@@ -186,19 +191,31 @@ const ProjectCard = ({
 
                 <div className="pt-4 flex items-center gap-4">
                   <button
-                    onClick={() => onPlayVideo && onPlayVideo(youTube || video || "")}
+                    onClick={() =>
+                      onPlayVideo && onPlayVideo(youTube || video || "")
+                    }
                     className="p-1.5 rounded-full hover:bg-white/5 text-gray-400 hover:text-white transition-colors duration-200 cursor-pointer"
                     title="Watch Demo"
                   >
                     <YouTube className="w-6 h-6 md:w-7 md:h-7" />
                   </button>
 
-                  <a href={gitHub} target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-full hover:bg-white/5 text-gray-400 hover:text-white transition-colors duration-200">
+                  <a
+                    href={gitHub}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-1.5 rounded-full hover:bg-white/5 text-gray-400 hover:text-white transition-colors duration-200"
+                  >
                     <GitHub className="w-6 h-6 md:w-7 md:h-7" />
                   </a>
 
                   {demo && (
-                    <a href={demo} target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-full hover:bg-white/5 text-gray-400 hover:text-white transition-colors duration-200">
+                    <a
+                      href={demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-1.5 rounded-full hover:bg-white/5 text-gray-400 hover:text-white transition-colors duration-200"
+                    >
                       <SquareArrowOutUpRight className="w-5 h-5 md:w-6 md:h-6" />
                     </a>
                   )}
@@ -235,19 +252,31 @@ const ProjectCard = ({
 
               <div className="pt-4 flex items-center gap-4">
                 <button
-                  onClick={() => onPlayVideo && onPlayVideo(youTube || video || "")}
+                  onClick={() =>
+                    onPlayVideo && onPlayVideo(youTube || video || "")
+                  }
                   className="p-1.5 rounded-full hover:bg-white/5 text-gray-400 hover:text-white transition-colors duration-200 cursor-pointer"
                   title="Watch Demo"
                 >
                   <YouTube className="w-6 h-6 md:w-7 md:h-7" />
                 </button>
 
-                <a href={gitHub} target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-full hover:bg-white/5 text-gray-400 hover:text-white transition-colors duration-200">
+                <a
+                  href={gitHub}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-1.5 rounded-full hover:bg-white/5 text-gray-400 hover:text-white transition-colors duration-200"
+                >
                   <GitHub className="w-6 h-6 md:w-7 md:h-7" />
                 </a>
 
                 {demo && (
-                  <a href={demo} target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-full hover:bg-white/5 text-gray-400 hover:text-white transition-colors duration-200">
+                  <a
+                    href={demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-1.5 rounded-full hover:bg-white/5 text-gray-400 hover:text-white transition-colors duration-200"
+                  >
                     <SquareArrowOutUpRight className="w-5 h-5 md:w-6 md:h-6" />
                   </a>
                 )}

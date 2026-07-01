@@ -1,6 +1,6 @@
 "use client";
 
-import { MouseEvent, useState, useRef, useEffect } from "react";
+import { MouseEvent, useState, useEffect } from "react";
 import {
   motion,
   AnimatePresence,
@@ -10,9 +10,12 @@ import {
 import {
   ArrowLeft,
   ArrowRight,
+  ChevronLeft,
+  ChevronRight,
   Play,
   SquareArrowOutUpRight,
 } from "lucide-react";
+import Image from "next/image";
 import { YouTube, GitHub } from "../../../UI/Icons";
 import { Project } from "@/i18n/translations";
 
@@ -58,8 +61,7 @@ export default function ProjectCarousel({
 }: ProjectCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // 1 = next, -1 = prev
-  const [isHovered, setIsHovered] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -67,39 +69,16 @@ export default function ProjectCarousel({
   const currentProject = projects[currentIndex];
   const youtubeId = getYoutubeId(currentProject?.youTube);
 
-  // Handle image resolution fallbacks
-  const getInitialImg = (proj: Project) => {
-    if (proj.image) return proj.image;
-    const yid = getYoutubeId(proj.youTube);
-    return yid ? `https://img.youtube.com/vi/${yid}/maxresdefault.jpg` : "";
-  };
-
-  const [imgSrc, setImgSrc] = useState("");
+  const projectImages = currentProject?.images && currentProject.images.length > 0
+    ? currentProject.images
+    : [
+        currentProject?.image ||
+          (youtubeId ? `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg` : "")
+      ].filter(Boolean);
 
   useEffect(() => {
-    if (currentProject) {
-      setImgSrc(getInitialImg(currentProject));
-    }
-  }, [currentIndex, currentProject]);
-
-  const handleImgError = () => {
-    const yid = getYoutubeId(currentProject?.youTube);
-    if (yid && imgSrc.includes("maxresdefault")) {
-      setImgSrc(`https://img.youtube.com/vi/${yid}/hqdefault.jpg`);
-    }
-  };
-
-  // Play video preview on hover
-  useEffect(() => {
-    if (videoRef.current) {
-      if (isHovered) {
-        videoRef.current.play().catch(() => {});
-      } else {
-        videoRef.current.pause();
-        videoRef.current.currentTime = 0;
-      }
-    }
-  }, [isHovered]);
+    setActiveImageIndex(0);
+  }, [currentIndex]);
 
   const handleMouseMove = ({ currentTarget, clientX, clientY }: MouseEvent) => {
     const { left, top } = currentTarget.getBoundingClientRect();
@@ -174,51 +153,78 @@ export default function ProjectCarousel({
             >
               {/* Media Preview Column */}
               <div
-                className="lg:col-span-6 flex flex-col justify-center w-full"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
+                className="lg:col-span-7 flex flex-col justify-center w-full"
+                onMouseDown={(e) => e.stopPropagation()}
+                onTouchStart={(e) => e.stopPropagation()}
               >
-                <div
-                  className="group/media relative w-full overflow-hidden rounded-2xl border border-white/5 bg-neutral-900 aspect-video lg:aspect-auto lg:h-full lg:min-h-[440px] cursor-pointer"
-                  onClick={() =>
-                    onPlayVideo(
-                      currentProject.youTube || currentProject.video || "",
-                      currentProject.title,
-                    )
-                  }
-                >
-                  {/* Thumbnail or Image */}
-                  {(!currentProject.video || !isHovered) && imgSrc && (
-                    <img
-                      src={imgSrc}
-                      alt={currentProject.title}
-                      onError={handleImgError}
-                      className="w-full h-full object-cover transform transition-transform duration-700 ease-out select-none pointer-events-none"
-                    />
-                  )}
+                <div className="group/media relative w-full overflow-hidden rounded-2xl border border-white/5 bg-neutral-950 aspect-video select-none">
+                  {projectImages.length > 0 ? (
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={projectImages[activeImageIndex]}
+                        alt={`${currentProject.title} - ${activeImageIndex + 1}`}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover transition-all duration-500 ease-in-out"
+                        priority={activeImageIndex === 0}
+                      />
 
-                  {/* Video Hover Preview */}
-                  {currentProject.video && (
-                    <video
-                      ref={videoRef}
-                      src={currentProject.video}
-                      muted
-                      loop
-                      playsInline
-                      className={`w-full h-full object-cover transform transition-transform duration-700 ease-out ${
-                        isHovered
-                          ? "opacity-100"
-                          : "opacity-0 absolute inset-0 pointer-events-none"
-                      }`}
-                    />
-                  )}
+                      {/* Navigation Arrows */}
+                      {projectImages.length > 1 && (
+                        <>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setActiveImageIndex((prev) =>
+                                prev === 0 ? projectImages.length - 1 : prev - 1
+                              );
+                            }}
+                            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 hover:bg-black/60 border border-white/10 text-white opacity-0 group-hover/media:opacity-100 transition-opacity duration-300 backdrop-blur-xs cursor-pointer z-10"
+                            aria-label="Imagen anterior"
+                          >
+                            <ChevronLeft className="w-5 h-5" />
+                          </button>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setActiveImageIndex((prev) =>
+                                prev === projectImages.length - 1 ? 0 : prev + 1
+                              );
+                            }}
+                            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 hover:bg-black/60 border border-white/10 text-white opacity-0 group-hover/media:opacity-100 transition-opacity duration-300 backdrop-blur-xs cursor-pointer z-10"
+                            aria-label="Siguiente imagen"
+                          >
+                            <ChevronRight className="w-5 h-5" />
+                          </button>
+                        </>
+                      )}
 
-                  {/* Play Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover/media:bg-black/45 transition-colors duration-300 pointer-events-none">
-                    <div className="w-14 h-14 rounded-full bg-primary/95 text-white flex items-center justify-center shadow-lg transform scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 hover:bg-primary shadow-primary/30 backdrop-blur-xs">
-                      <Play className="w-6 h-6 fill-white ml-0.5" />
+                      {/* Pagination Dots */}
+                      {projectImages.length > 1 && (
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 bg-black/20 px-3 py-1.5 rounded-full backdrop-blur-xs border border-white/5">
+                          {projectImages.map((_, idx) => (
+                            <button
+                              key={idx}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setActiveImageIndex(idx);
+                              }}
+                              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                                idx === activeImageIndex
+                                  ? "bg-white w-3"
+                                  : "bg-white/40 hover:bg-white/60"
+                              }`}
+                              aria-label={`Ir a imagen ${idx + 1}`}
+                            />
+                          ))}
+                        </div>
+                      )}
                     </div>
-                  </div>
+                  ) : (
+                    <div className="w-full h-full bg-neutral-800 flex items-center justify-center text-gray-500">
+                      No images available
+                    </div>
+                  )}
 
                   {/* Subtle Gradient Shadow */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
@@ -226,7 +232,7 @@ export default function ProjectCarousel({
               </div>
 
               {/* Text Description Column */}
-              <div className="lg:col-span-6 flex flex-col justify-between h-full py-2 select-none">
+              <div className="lg:col-span-5 flex flex-col justify-between h-full py-2 select-none">
                 <div className="flex flex-col justify-start">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight">
                     {currentProject.title}

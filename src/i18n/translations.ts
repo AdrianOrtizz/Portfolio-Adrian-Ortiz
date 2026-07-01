@@ -10,6 +10,7 @@ export type Project = {
   demo?: string;
   image?: string;
   video?: string;
+  images?: string[];
 };
 
 export type Experience = {
@@ -200,6 +201,30 @@ const translations: Record<Language, Translations> = {
 export const projectsData: Record<Language, Project[]> = {
   es: [
     {
+      title: "CodaSync - Landing page",
+      description:
+        "CodaSync es una demostración técnica de frontend disfrazada de una plataforma SaaS para la industria de la música en vivo. El objetivo de esta landing page es exhibir el desarrollo de interfaces modernas, interactivas y escalables. El proyecto trasciende la maquetación estática tradicional al incorporar un simulador de Stage Plot funcional que permite a los usuarios interactuar con componentes y generar audio en tiempo real.",
+      tags: [
+        "React",
+        "Next.js",
+        "Tailwind",
+        "Zustand",
+        "Framer Motion",
+        "ShadCN",
+      ],
+      gitHub: "https://github.com/AdrianOrtizz/CodaSync",
+      youTube: "https://www.youtube.com/watch?v=OhAsjIjJd4Q",
+      demo: "https://codasync.vercel.app/",
+      className: "md:col-span-2 md:row-span-1",
+      images: [
+        "/projects/CodaSync/Hero.webp",
+        "/projects/CodaSync/Info.webp",
+        "/projects/CodaSync/Plans.webp",
+        "/projects/CodaSync/QA.webp",
+        "/projects/CodaSync/SignUp.webp",
+      ],
+    },
+    {
       title: "Habitzz",
       description:
         "Esta plataforma full-stack transforma la gestión de hábitos y metas semanales en una experiencia fluida e intuitiva gracias a su UI reactiva. Sin embargo, el verdadero valor está bajo el capó: cuenta con una arquitectura robusta apoyada en Next.js, Express y MongoDB, con un estado de servidor optimizado y un motor de cálculo de fechas blindado contra inconsistencias de zonas horarias (Timezone-proof). Un proyecto diseñado no solo para verse bien, sino para funcionar sin fallas en entornos de producción.",
@@ -217,6 +242,41 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=OGnYNRL4dvk",
       demo: "https://habitzz-track.vercel.app/",
       className: "md:col-span-2 md:row-span-1",
+      images: [
+        "/projects/Habitzz/Landing.webp",
+        "/projects/Habitzz/Dashboard.webp",
+        "/projects/Habitzz/CreateHabit.webp",
+        "/projects/Habitzz/Goals.webp",
+        "/projects/Habitzz/SignUp.webp",
+      ],
+    },
+    {
+      title: "Instagram Stalker App",
+      description:
+        "Herramienta de análisis de perfiles públicos de Instagram basada en la arquitectura de consumo de APIs externas (Scraper API). Desarrollé una lógica de comparación de grafos sociales para identificar discrepancias entre seguidores y seguidos, ofreciendo una interfaz intuitiva con búsqueda indexada y redireccionamiento dinámico.",
+      tags: ["React", "Next.js", "Tailwind"],
+      youTube: "https://www.youtube.com/watch?v=1YiMWxrVo2o",
+      gitHub: "https://github.com/AdrianOrtizz/instagram_stalker_app",
+      className: "md:col-span-1 md:row-span-1",
+      images: [
+        "/projects/InstagramStalker/Hero.webp",
+        "/projects/InstagramStalker/Info.webp",
+      ],
+    },
+
+    {
+      title: "Pokedex",
+      description:
+        "Aplicación de visualización de datos de alto rendimiento que consume la PokeAPI. Implementé un motor de búsqueda y filtrado algorítmico, optimizando el renderizado de estados complejos para ofrecer una navegación fluida entre perfiles detallados de personajes.",
+      tags: ["React", "Redux", "Node.js", "Express", "PostgreSQL", "Sequelize"],
+      youTube: "https://www.youtube.com/watch?v=T-SNhqNqT18",
+      gitHub: "https://github.com/AdrianOrtizz/PI-Pokemon-main",
+      className: "md:col-span-1 md:row-span-1",
+      images: [
+        "/projects/Pokedex/Landing.webp",
+        "/projects/Pokedex/List.webp",
+        "/projects/Pokedex/Detail.webp",
+      ],
     },
     {
       title: "TizzTube Downloader",
@@ -226,15 +286,7 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=wh5SKy4wWaU",
       gitHub: "https://github.com/AdrianOrtizz/TizzTube-downloader",
       className: "md:col-span-1 md:row-span-1",
-    },
-    {
-      title: "Pokedex",
-      description:
-        "Aplicación de visualización de datos de alto rendimiento que consume la PokeAPI. Implementé un motor de búsqueda y filtrado algorítmico, optimizando el renderizado de estados complejos para ofrecer una navegación fluida entre perfiles detallados de personajes.",
-      tags: ["React", "Redux", "Node.js", "Express", "PostgreSQL", "Sequelize"],
-      youTube: "https://www.youtube.com/watch?v=T-SNhqNqT18",
-      gitHub: "https://github.com/AdrianOrtizz/PI-Pokemon-main",
-      className: "md:col-span-1 md:row-span-1",
+      images: ["/projects/YouTube/Hero.webp"],
     },
     {
       title: "UUID Store",
@@ -253,6 +305,7 @@ export const projectsData: Record<Language, Project[]> = {
       gitHub: "https://github.com/Agus-Albarracin/uuid-store",
       youTube: "https://www.youtube.com/watch?v=wOM3vOVKjNI",
       className: "md:col-span-2 md:row-span-1",
+      images: ["/projects/UUID/Landing.webp"],
     },
     {
       title: "Rick And Morty App",
@@ -270,16 +323,9 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=AZ5fdddHnS4",
       gitHub: "https://github.com/AdrianOrtizz/PI_Rick_And_Morty",
       className: "md:col-span-1 md:row-span-1",
+      images: ["/projects/RyM/Main.webp", "/projects/RyM/LogIn.webp"],
     },
-    {
-      title: "Instagram Stalker App",
-      description:
-        "Herramienta de análisis de perfiles públicos de Instagram basada en la arquitectura de consumo de APIs externas (Scraper API). Desarrollé una lógica de comparación de grafos sociales para identificar discrepancias entre seguidores y seguidos, ofreciendo una interfaz intuitiva con búsqueda indexada y redireccionamiento dinámico.",
-      tags: ["React", "Next.js", "Tailwind"],
-      youTube: "https://www.youtube.com/watch?v=1YiMWxrVo2o",
-      gitHub: "https://github.com/AdrianOrtizz/instagram_stalker_app",
-      className: "md:col-span-1 md:row-span-1",
-    },
+
     {
       title: "Gifzz",
       description:
@@ -288,9 +334,34 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=CRHZ77sA-Xo",
       gitHub: "https://github.com/AdrianOrtizz/Gifs-gallery",
       className: "md:col-span-2 lg:col-span-1 md:row-span-1",
+      images: ["/projects/Gifzz/Main.webp"],
     },
   ],
   en: [
+    {
+      title: "CodaSync - Landing page",
+      description:
+        "CodaSync is a technical frontend demonstration disguised as a SaaS platform for the live music industry. The goal of this landing page is to showcase the development of modern, interactive, and scalable interfaces. The project goes beyond traditional static layout by incorporating a functional Stage Plot simulator that allows users to interact with components and generate real-time audio.",
+      tags: [
+        "React",
+        "Next.js",
+        "Tailwind",
+        "Zustand",
+        "Framer Motion",
+        "ShadCN",
+      ],
+      gitHub: "https://github.com/AdrianOrtizz/CodaSync",
+      youTube: "https://www.youtube.com/watch?v=OhAsjIjJd4Q",
+      demo: "https://codasync.vercel.app/",
+      className: "md:col-span-2 md:row-span-1",
+      images: [
+        "/projects/CodaSync/Hero.webp",
+        "/projects/CodaSync/Info.webp",
+        "/projects/CodaSync/Plans.webp",
+        "/projects/CodaSync/QA.webp",
+        "/projects/CodaSync/SignUp.webp",
+      ],
+    },
     {
       title: "Habitzz",
       description:
@@ -309,15 +380,26 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=OGnYNRL4dvk",
       demo: "https://habitzz-track.vercel.app/",
       className: "md:col-span-2 md:row-span-1",
+      images: [
+        "/projects/Habitzz/Landing.webp",
+        "/projects/Habitzz/Dashboard.webp",
+        "/projects/Habitzz/CreateHabit.webp",
+        "/projects/Habitzz/Goals.webp",
+        "/projects/Habitzz/SignUp.webp",
+      ],
     },
     {
-      title: "TizzTube Downloader",
+      title: "Instagram Stalker App",
       description:
-        "A media processing app that extracts and downloads video/audio streams in real time. I implemented client-side history persistence with LocalStorage and optimized dynamic player rendering through third-party API consumption.",
-      tags: ["React", "Next.js", "Redux Toolkit", "Tailwind"],
-      youTube: "https://www.youtube.com/watch?v=wh5SKy4wWaU",
-      gitHub: "https://github.com/AdrianOrtizz/TizzTube-downloader",
+        "A profile analysis tool for public Instagram accounts built on external API consumption (Scraper API). I developed graph comparison logic to detect discrepancies between followers and following lists, offering an intuitive interface with indexed search and dynamic redirection.",
+      tags: ["React", "Next.js", "Tailwind"],
+      youTube: "https://www.youtube.com/watch?v=1YiMWxrVo2o",
+      gitHub: "https://github.com/AdrianOrtizz/instagram_stalker_app",
       className: "md:col-span-1 md:row-span-1",
+      images: [
+        "/projects/InstagramStalker/Hero.webp",
+        "/projects/InstagramStalker/Info.webp",
+      ],
     },
     {
       title: "Pokedex",
@@ -327,6 +409,21 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=T-SNhqNqT18",
       gitHub: "https://github.com/AdrianOrtizz/PI-Pokemon-main",
       className: "md:col-span-1 md:row-span-1",
+      images: [
+        "/projects/Pokedex/Landing.webp",
+        "/projects/Pokedex/List.webp",
+        "/projects/Pokedex/Detail.webp",
+      ],
+    },
+    {
+      title: "TizzTube Downloader",
+      description:
+        "A media processing app that extracts and downloads video/audio streams in real time. I implemented client-side history persistence with LocalStorage and optimized dynamic player rendering through third-party API consumption.",
+      tags: ["React", "Next.js", "Redux Toolkit", "Tailwind"],
+      youTube: "https://www.youtube.com/watch?v=wh5SKy4wWaU",
+      gitHub: "https://github.com/AdrianOrtizz/TizzTube-downloader",
+      className: "md:col-span-1 md:row-span-1",
+      images: ["/projects/YouTube/Hero.webp"],
     },
     {
       title: "UUID Store",
@@ -345,6 +442,7 @@ export const projectsData: Record<Language, Project[]> = {
       gitHub: "https://github.com/Agus-Albarracin/uuid-store",
       youTube: "https://www.youtube.com/watch?v=wOM3vOVKjNI",
       className: "md:col-span-2 md:row-span-1",
+      images: ["/projects/UUID/Landing.webp"],
     },
     {
       title: "Rick And Morty App",
@@ -362,16 +460,9 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=AZ5fdddHnS4",
       gitHub: "https://github.com/AdrianOrtizz/PI_Rick_And_Morty",
       className: "md:col-span-1 md:row-span-1",
+      images: ["/projects/RyM/Main.webp", "/projects/RyM/LogIn.webp"],
     },
-    {
-      title: "Instagram Stalker App",
-      description:
-        "A profile analysis tool for public Instagram accounts built on external API consumption (Scraper API). I developed graph comparison logic to detect discrepancies between followers and following lists, offering an intuitive interface with indexed search and dynamic redirection.",
-      tags: ["React", "Next.js", "Tailwind"],
-      youTube: "https://www.youtube.com/watch?v=1YiMWxrVo2o",
-      gitHub: "https://github.com/AdrianOrtizz/instagram_stalker_app",
-      className: "md:col-span-1 md:row-span-1",
-    },
+
     {
       title: "Gifzz",
       description:
@@ -380,6 +471,7 @@ export const projectsData: Record<Language, Project[]> = {
       youTube: "https://www.youtube.com/watch?v=CRHZ77sA-Xo",
       gitHub: "https://github.com/AdrianOrtizz/Gifs-gallery",
       className: "md:col-span-2 lg:col-span-1 md:row-span-1",
+      images: ["/projects/Gifzz/Main.webp"],
     },
   ],
 };
